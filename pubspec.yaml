@@ -9,10 +9,12 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
+
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
