@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:free_games_giveaways/free_games/data/repository/free_games_repository.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,6 +18,8 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  FreeGamesRepository f = FreeGamesRepository();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,11 +29,16 @@ class _HomePageState extends State<HomePage> {
         child: PageView(
           controller: _pageController,
           onPageChanged: _onPageChanged,
-          children: const <Widget>[
+          children: <Widget>[
             Center(
-              child: Text('Free Games'),
+              child: ElevatedButton(
+                onPressed: () {
+                  f.getFreeGamesList();
+                },
+                child: Text('Get Data'),
+              ),
             ),
-            Center(
+            const Center(
               child: Text('Giveaways'),
             ),
           ],
@@ -46,6 +54,7 @@ class _HomePageState extends State<HomePage> {
           unselectedItemColor: Theme.of(context).accentColor,
           selectedItemColor: Theme.of(context).canvasColor,
           showSelectedLabels: true,
+          backgroundColor: Theme.of(context).cardColor,
           selectedLabelStyle: GoogleFonts.montserrat(),
           //showUnselectedLabels: true,
           items: const [
