@@ -8,9 +8,10 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'GG',
       theme: ThemeData(
-      canvasColor: const Color(0xFF171717),
-      accentColor: const Color(0xFFFECF03),
-      cardColor: const Color(0xFF1F1F1F),
+        brightness: Brightness.dark,
+        canvasColor: const Color(0xFF171717),
+        accentColor: const Color(0xFFFECF03),
+        cardColor: const Color(0xFF1F1F1F),
         primarySwatch: Colors.yellow,
       ),
       home: HomePage(),
