@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'dart:io';
 
-import 'package:free_games_giveaways/app/errors/error.dart';
 import 'package:free_games_giveaways/free_games/data/models/game.dart';
 import 'package:http/http.dart' as http;
 
@@ -14,11 +14,19 @@ class FreeGamesRepository {
     if (response.statusCode == 200) {
       try {
         final data = jsonEncode(response.body);
-        final List<Game> game = gameFromJson(data);
-        return game;
+        final List<Game> games = gameFromJson(data);
+        return games;
       } catch (e) {
-        throw CustomError(message: 'Could not parse data');
+        throw const SocketException('Could not parse data');
       }
+    }
+
+    if (response.statusCode == 404) {
+      throw const SocketException('Data not found');
+    }
+
+    if (response.statusCode == 500) {
+      throw const SocketException('Unexpected server error occurred');
     }
   }
 }
