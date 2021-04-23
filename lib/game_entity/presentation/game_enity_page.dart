@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:free_games_giveaways/app/presentation/components/progress_image.dart';
-import 'package:free_games_giveaways/app/utils/launch_url.dart';
 import 'package:free_games_giveaways/game_entity/data/cubit/game_entity_cubit.dart';
 import 'package:free_games_giveaways/game_entity/presentation/components/about_section.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/about_widget.dart';
 import 'package:free_games_giveaways/game_entity/presentation/components/game_header.dart';
 import 'package:free_games_giveaways/game_entity/presentation/components/minimum_spec_section.dart';
 import 'package:free_games_giveaways/game_entity/presentation/components/screenshot_section.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/system_requirements_widget.dart';
-import 'package:getwidget/getwidget.dart';
-import 'package:octo_image/octo_image.dart';
+
+import 'components/button_bar.dart';
 
 class GameEntityPage extends StatelessWidget {
   final int id;
@@ -42,6 +38,8 @@ class GameEntityPage extends StatelessWidget {
                   GameHeader(game: state.game),
                   SizedBox(height: 8),
                   AboutSection(game: state.game),
+                  SizedBox(height: 16),
+                  KButtonBar(game: state.game),
                   ScreenshotSection(game: state.game),
                   MinimumSpecSection(game: state.game),
                 ],

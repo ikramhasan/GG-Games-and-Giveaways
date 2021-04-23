@@ -20,6 +20,7 @@ class AboutWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         buildColumn(prefix1, suffix1),
+        SizedBox(width: 16),
         buildColumn(prefix2, suffix2),
       ],
     );

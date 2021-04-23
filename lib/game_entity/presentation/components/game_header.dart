@@ -56,7 +56,10 @@ class GameHeader extends StatelessWidget {
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Theme.of(context).accentColor,
+                  primary: Theme.of(context).cardColor,
+                  side: BorderSide(
+                    color: Theme.of(context).accentColor,
+                  ),
                 ),
                 onPressed: () {
                   launchURL(game.gameUrl);
@@ -65,7 +68,7 @@ class GameHeader extends StatelessWidget {
                   'Get the Game',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Theme.of(context).cardColor,
+                    color: Colors.white,
                   ),
                 ),
               ),
@@ -80,11 +83,11 @@ class GameHeader extends StatelessWidget {
           expandedTitleBackgroundColor: Theme.of(context).cardColor,
           contentBackgroundColor: Theme.of(context).cardColor,
           expandedIcon: Text(
-            'hide',
+            '- Hide',
             style: TextStyle(color: Theme.of(context).accentColor),
           ),
           collapsedIcon: Text(
-            'show',
+            '+ Read more',
             style: TextStyle(color: Theme.of(context).accentColor),
           ),
         ),
