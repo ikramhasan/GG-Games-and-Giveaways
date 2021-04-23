@@ -16,7 +16,10 @@ dependencies:
 
   flutter_bloc: ^7.0.0
   flutter_snake_navigationbar: ^0.5.0
+  getwidget: ^2.0.1-nullsafety.4
   google_fonts: ^2.0.0
+  octo_image: ^1.0.0+1
+  url_launcher: ^6.0.3
   http: ^0.13.1
 
 dev_dependencies:
