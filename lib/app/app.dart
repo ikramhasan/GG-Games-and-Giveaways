@@ -20,7 +20,7 @@ class App extends StatelessWidget {
           brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),
           accentColor: const Color(0xFF52EE01),
-          cardColor: const Color(0xFF1F1F1F),
+          cardColor: const Color(0xFF22252B),
           primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
