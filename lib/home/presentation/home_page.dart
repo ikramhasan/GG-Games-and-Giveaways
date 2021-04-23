@@ -25,18 +25,40 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: AnimatedContainer(
-        duration: const Duration(seconds: 1),
-        child: PageView(
-          controller: _pageController,
-          onPageChanged: _onPageChanged,
-          children: <Widget>[
-            FreeGamesPage(),
-            const Center(
-              child: Text('Giveaways'),
+      body: Stack(
+        children: [
+          AnimatedContainer(
+            duration: const Duration(seconds: 1),
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: _onPageChanged,
+              children: <Widget>[
+                FreeGamesPage(),
+                const Center(
+                  child: Text('Giveaways'),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            child: Container(
+              height: 100,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Theme.of(context).canvasColor.withOpacity(0),
+                    Theme.of(context).canvasColor,
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: SnakeNavigationBar.color(
           behaviour: SnakeBarBehaviour.floating,

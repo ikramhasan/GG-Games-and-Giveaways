@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../home/presentation/home_page.dart';
 
@@ -18,9 +19,10 @@ class App extends StatelessWidget {
         theme: ThemeData(
           brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),
-          accentColor: const Color(0xFFFECF03),
+          accentColor: const Color(0xFF52EE01),
           cardColor: const Color(0xFF1F1F1F),
           primarySwatch: Colors.yellow,
+          fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
         home: HomePage(),
       ),
