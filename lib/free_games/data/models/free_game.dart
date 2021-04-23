@@ -1,5 +1,5 @@
-class Game {
-  Game({
+class FreeGame {
+  FreeGame({
     required this.id,
     required this.title,
     required this.thumbnail,
@@ -25,7 +25,7 @@ class Game {
   String releaseDate;
   String freetogameProfileUrl;
 
-  factory Game.fromJson(Map<String, dynamic> json) => Game(
+  factory FreeGame.fromJson(Map<String, dynamic> json) => FreeGame(
         id: json["id"],
         title: json["title"],
         thumbnail: json["thumbnail"],

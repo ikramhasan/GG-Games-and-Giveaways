@@ -6,7 +6,7 @@ abstract class FreeGamesState {}
 class FreeGamesLoading extends FreeGamesState {}
 
 class FreeGamesLoaded extends FreeGamesState {
-  final List<Game> freeGamesList;
+  final List<FreeGame> freeGamesList;
 
   FreeGamesLoaded({
     required this.freeGamesList,

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
-import 'package:free_games_giveaways/free_games/data/models/game.dart';
 import 'package:free_games_giveaways/free_games/presentation/components/game_card.dart';
-import 'package:free_games_giveaways/free_games/presentation/components/thumbnail_preview.dart';
-import 'package:free_games_giveaways/free_games/utils/get_genre.dart';
 
 class FreeGamesPage extends StatelessWidget {
   @override
