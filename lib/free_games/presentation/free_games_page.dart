@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/components/game_card.dart';
+import 'package:free_games_giveaways/game_entity/presentation/game_enity_page.dart';
 
 class FreeGamesPage extends StatelessWidget {
   @override
@@ -30,9 +31,16 @@ class FreeGamesPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
 
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: GameCard(game: game),
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => GameEntityPage(id: game.id),
+                      ));
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: GameCard(game: game),
+                    ),
                   );
                 },
               );

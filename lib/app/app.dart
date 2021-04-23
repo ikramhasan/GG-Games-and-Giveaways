@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
+import 'package:free_games_giveaways/game_entity/data/cubit/game_entity_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../home/presentation/home_page.dart';
@@ -12,6 +13,8 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => FreeGamesCubit(),
+        ),BlocProvider(
+          create: (context) => GameEntityCubit(),
         ),
       ],
       child: MaterialApp(

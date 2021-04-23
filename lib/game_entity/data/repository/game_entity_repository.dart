@@ -1,21 +1,21 @@
 import 'dart:convert';
 import 'dart:io';
-
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
+import 'package:free_games_giveaways/game_entity/data/models/game_entity.dart';
 import 'package:http/http.dart' as http;
 
 const BASE_URL = 'https://www.freetogame.com/api';
 
-class FreeGamesRepository {
-  getFreeGamesList() async {
-    final Uri url = Uri.parse('$BASE_URL/games');
+class GameEntityRepository {
+  
+
+  getGameById(int id) async {
+    final Uri url = Uri.parse('$BASE_URL/game?id=${id.toString()}');
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
       try {
         final data = jsonDecode(response.body);
-        final List<FreeGame> games =
-            (data as List).map((e) => FreeGame.fromJson(e)).toList();
+        final GameEntity games = GameEntity.fromJson(data);
         return games;
       } catch (e) {
         throw const SocketException('Could not parse data');
