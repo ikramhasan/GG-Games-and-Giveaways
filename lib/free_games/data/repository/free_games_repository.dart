@@ -13,8 +13,9 @@ class FreeGamesRepository {
 
     if (response.statusCode == 200) {
       try {
-        final data = jsonEncode(response.body);
-        final List<Game> games = gameFromJson(data);
+        final data = jsonDecode(response.body);
+        final List<Game> games =
+            (data as List).map((e) => Game.fromJson(e)).toList();
         return games;
       } catch (e) {
         throw const SocketException('Could not parse data');

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:free_games_giveaways/free_games/data/repository/free_games_repository.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_games_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
@@ -30,14 +31,7 @@ class _HomePageState extends State<HomePage> {
           controller: _pageController,
           onPageChanged: _onPageChanged,
           children: <Widget>[
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  f.getFreeGamesList();
-                },
-                child: Text('Get Data'),
-              ),
-            ),
+            FreeGamesPage(),
             const Center(
               child: Text('Giveaways'),
             ),

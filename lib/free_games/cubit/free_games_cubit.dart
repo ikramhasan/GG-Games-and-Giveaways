@@ -11,7 +11,7 @@ class FreeGamesCubit extends Cubit<FreeGamesState> {
   final FreeGamesRepository _repository = FreeGamesRepository();
   FreeGamesCubit() : super(FreeGamesLoading());
 
-  getFreeGamesList() async {
+  Future<void> getFreeGamesList() async {
     emit(FreeGamesLoading());
 
     try {

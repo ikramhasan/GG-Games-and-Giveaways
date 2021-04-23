@@ -1,41 +1,29 @@
-// To parse this JSON data, do
-//
-//     final game = gameFromJson(jsonString);
-
-import 'dart:convert';
-
-List<Game> gameFromJson(String str) =>
-    List<Game>.from(json.decode(str).map((x) => Game.fromJson(x)));
-
-String gameToJson(List<Game> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
-
 class Game {
   Game({
-    this.id,
-    this.title,
-    this.thumbnail,
-    this.shortDescription,
-    this.gameUrl,
-    this.genre,
-    this.platform,
-    this.publisher,
-    this.developer,
-    this.releaseDate,
-    this.freetogameProfileUrl,
+    required this.id,
+    required this.title,
+    required this.thumbnail,
+    required this.shortDescription,
+    required this.gameUrl,
+    required this.genre,
+    required this.platform,
+    required this.publisher,
+    required this.developer,
+    required this.releaseDate,
+    required this.freetogameProfileUrl,
   });
 
-  int? id;
-  String? title;
-  String? thumbnail;
-  String? shortDescription;
-  String? gameUrl;
+  int id;
+  String title;
+  String thumbnail;
+  String shortDescription;
+  String gameUrl;
   Genre? genre;
   Platform? platform;
-  String? publisher;
-  String? developer;
-  String? releaseDate;
-  String? freetogameProfileUrl;
+  String publisher;
+  String developer;
+  String releaseDate;
+  String freetogameProfileUrl;
 
   factory Game.fromJson(Map<String, dynamic> json) => Game(
         id: json["id"],
@@ -43,8 +31,8 @@ class Game {
         thumbnail: json["thumbnail"],
         shortDescription: json["short_description"],
         gameUrl: json["game_url"],
-        genre: genreValues.map![json["genre"]],
-        platform: platformValues.map![json["platform"]],
+        genre: genreValues.map[json["genre"]],
+        platform: platformValues.map[json["platform"]],
         publisher: json["publisher"],
         developer: json["developer"],
         releaseDate: json["release_date"],
@@ -113,14 +101,14 @@ final platformValues = EnumValues({
 });
 
 class EnumValues<T> {
-  Map<String, T>? map;
+  Map<String, T> map;
   Map<T, String>? reverseMap;
 
   EnumValues(this.map);
 
   Map<T, String> get reverse {
     if (reverseMap == null) {
-      reverseMap = map!.map((k, v) => new MapEntry(v, k));
+      reverseMap = map.map((k, v) => new MapEntry(v, k));
     }
     return reverseMap!;
   }
