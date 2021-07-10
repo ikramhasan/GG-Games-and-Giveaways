@@ -7,8 +7,10 @@ const BASE_URL = 'https://www.gamerpower.com/api';
 
 class GiveawaysRepository {
   getGiveawaysList() async {
-    final Uri url = Uri.parse('$BASE_URL/games');
+    final Uri url = Uri.parse('$BASE_URL/giveaways');
     final response = await http.get(url);
+
+    print(response.body);
 
     if (response.statusCode == 200) {
       try {
