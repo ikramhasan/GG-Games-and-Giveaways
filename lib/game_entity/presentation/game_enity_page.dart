@@ -39,7 +39,10 @@ class GameEntityPage extends StatelessWidget {
                   SizedBox(height: 8),
                   AboutSection(game: state.game),
                   SizedBox(height: 16),
-                  KButtonBar(game: state.game),
+                  KButtonBar(
+                    url: state.game.gameUrl,
+                    entityType: EntityType.GAME,
+                  ),
                   ScreenshotSection(game: state.game),
                   MinimumSpecSection(game: state.game),
                 ],

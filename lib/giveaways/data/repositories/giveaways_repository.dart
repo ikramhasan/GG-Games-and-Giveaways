@@ -10,8 +10,6 @@ class GiveawaysRepository {
     final Uri url = Uri.parse('$BASE_URL/giveaways');
     final response = await http.get(url);
 
-    print(response.body);
-
     if (response.statusCode == 200) {
       try {
         final data = jsonDecode(response.body);

@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
 
 import 'package:free_games_giveaways/app/utils/launch_url.dart';
-import 'package:free_games_giveaways/game_entity/data/models/game_entity.dart';
+
+enum EntityType { GAME, GIVEAWAY }
 
 class KButtonBar extends StatelessWidget {
-  final GameEntity game;
+  final String url;
+  final EntityType entityType;
 
   const KButtonBar({
     Key? key,
-    required this.game,
+    required this.url,
+    required this.entityType,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: EdgeInsets.symmetric(
+        horizontal: entityType == EntityType.GAME ? 16 : 0,
+      ),
       child: Row(
         children: [
           Expanded(
@@ -27,10 +32,12 @@ class KButtonBar extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                launchURL(game.gameUrl);
+                launchURL(url);
               },
               child: Text(
-                'Get the Game',
+                entityType == EntityType.GAME
+                    ? 'Get the Game'
+                    : 'Go to Giveaway',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -48,7 +55,7 @@ class KButtonBar extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              launchURL(game.gameUrl);
+              launchURL(url);
             },
             child: Icon(
               Icons.share,
