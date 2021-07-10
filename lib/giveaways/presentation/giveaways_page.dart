@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
+import 'package:free_games_giveaways/giveaways/presentation/components/giveaway_card.dart';
 
 class GiveawaysPage extends StatelessWidget {
   const GiveawaysPage({Key? key}) : super(key: key);
@@ -25,7 +26,11 @@ class GiveawaysPage extends StatelessWidget {
               return ListView.builder(
                 itemCount: state.giveawaysList.length,
                 itemBuilder: (context, index) {
-                  return Text(state.giveawaysList[index].title);
+                  final giveaway = state.giveawaysList[index];
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 8, top: 8),
+                    child: GiveawayCard(giveaway: giveaway),
+                  );
                 },
               );
             }
