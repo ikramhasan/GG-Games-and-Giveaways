@@ -6,8 +6,6 @@ import 'package:free_games_giveaways/game_entity/data/cubit/game_entity_cubit.da
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../home/presentation/home_page.dart';
-
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
