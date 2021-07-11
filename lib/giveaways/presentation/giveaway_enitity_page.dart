@@ -102,6 +102,7 @@ class GiveawayEntityPage extends StatelessWidget {
                     suffix1: giveaway.platforms,
                     suffix2: giveaway.publishedDate.toString().substring(0, 10),
                   ),
+                  SizedBox(height: 8),
                 ],
               ),
             ),

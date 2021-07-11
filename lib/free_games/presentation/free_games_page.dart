@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/components/game_card.dart';
 import 'package:free_games_giveaways/game_entity/presentation/game_enity_page.dart';
@@ -12,6 +14,21 @@ class FreeGamesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Free Games'),
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.info),
+            onPressed: () {
+              showDialog(
+                context: context,
+                barrierColor: Colors.black.withOpacity(0.8),
+                builder: (_) => AlertDialog(
+                  backgroundColor: Theme.of(context).cardColor,
+                  content: AboutPage(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),

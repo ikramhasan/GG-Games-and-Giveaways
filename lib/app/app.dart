@@ -23,6 +23,7 @@ class App extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'GG',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),

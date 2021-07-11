@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 import 'package:free_games_giveaways/giveaways/presentation/components/giveaway_card.dart';
 
@@ -11,6 +13,21 @@ class GiveawaysPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Giveaways'),
+        actions: [
+          IconButton(
+            icon: Icon(CupertinoIcons.info),
+            onPressed: () {
+              showDialog(
+                context: context,
+                barrierColor: Colors.black.withOpacity(0.8),
+                builder: (_) => AlertDialog(
+                  backgroundColor: Theme.of(context).cardColor,
+                  content: AboutPage(),
+                ),
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),

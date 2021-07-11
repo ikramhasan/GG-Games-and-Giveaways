@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ikramhasan.free_games_giveaways">
+  <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="GG"
         android:icon="@mipmap/launcher_icon">
