@@ -20,16 +20,22 @@ class GiveawayCard extends StatelessWidget {
           );
         },
         child: Ink(
-          height: 212,
+          //height: 212,
           width: double.infinity,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                giveaway.image,
-                height: 120,
-                width: MediaQuery.of(context).size.width - 32 - 8,
-                fit: BoxFit.cover,
+              ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(6),
+                  topRight: Radius.circular(6),
+                ),
+                child: Image.network(
+                  giveaway.image,
+                  height: 150,
+                  width: MediaQuery.of(context).size.width - 32 - 8,
+                  fit: BoxFit.cover,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -44,11 +50,7 @@ class GiveawayCard extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 8),
-                    Text(
-                      giveaway.description,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                    Text(giveaway.description),
                   ],
                 ),
               ),

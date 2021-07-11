@@ -8,8 +8,10 @@ class GiveawaysPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Giveaways'),
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16),
         child: BlocConsumer<GiveawaysCubit, GiveawaysState>(

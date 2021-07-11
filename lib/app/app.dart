@@ -32,6 +32,10 @@ class App extends StatelessWidget {
           cardColor: const Color(0xFF22252B),
           primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.montserrat().fontFamily,
+          appBarTheme: AppBarTheme(
+            color: const Color(0xFF22252B),
+            titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         home: Wrapper(),
       ),

@@ -10,6 +10,9 @@ class FreeGamesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Free Games'),
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: BlocConsumer<FreeGamesCubit, FreeGamesState>(
@@ -30,6 +33,7 @@ class FreeGamesPage extends StatelessWidget {
             if (state is FreeGamesLoaded) {
               return ListView.builder(
                 itemCount: state.freeGamesList.length,
+                padding: EdgeInsets.only(top: 16),
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
 
