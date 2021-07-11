@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/wrapper.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/game_entity/data/cubit/game_entity_cubit.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
@@ -32,7 +33,7 @@ class App extends StatelessWidget {
           primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.montserrat().fontFamily,
         ),
-        home: HomePage(),
+        home: Wrapper(),
       ),
     );
   }

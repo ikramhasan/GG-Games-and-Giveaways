@@ -8,8 +8,6 @@ class GiveawaysPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bloc = context.read<GiveawaysCubit>();
-    bloc.getGiveawaysList();
 
     return Scaffold(
       body: Padding(

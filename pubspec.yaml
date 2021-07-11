@@ -21,6 +21,7 @@ dependencies:
   octo_image: ^1.0.0+1
   url_launcher: ^6.0.3
   http: ^0.13.1
+  share_plus: ^2.1.4
 
 dev_dependencies:
   flutter_test:

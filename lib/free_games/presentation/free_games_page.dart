@@ -3,12 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/components/game_card.dart';
 import 'package:free_games_giveaways/game_entity/presentation/game_enity_page.dart';
+import 'package:getwidget/components/loader/gf_loader.dart';
+import 'package:getwidget/getwidget.dart';
 
 class FreeGamesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final bloc = context.read<FreeGamesCubit>();
-    bloc.getFreeGamesList();
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -22,7 +22,9 @@ class FreeGamesPage extends StatelessWidget {
           builder: (context, state) {
             if (state is FreeGamesLoading) {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: GFLoader(
+                  type: GFLoaderType.android,
+                ),
               );
             }
             if (state is FreeGamesLoaded) {

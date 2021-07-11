@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'package:free_games_giveaways/free_games/data/repository/free_games_repository.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games_page.dart';
 import 'package:free_games_giveaways/giveaways/presentation/giveaways_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -19,8 +18,6 @@ class _HomePageState extends State<HomePage> {
       () => _selectedItemPosition = index,
     );
   }
-
-  FreeGamesRepository f = FreeGamesRepository();
 
   @override
   Widget build(BuildContext context) {
