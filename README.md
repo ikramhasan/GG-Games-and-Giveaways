@@ -7,7 +7,7 @@
   <p align="center">
     Never miss a free game! Get instantly notified when a game goes free.
     <br />
-    <a href="">Download App</a>
+    <a href="https://play.google.com/store/apps/details?id=com.ikramhasan.free_games_giveaways">Download App</a>
     ·
     <a href="https://github.com/ikramhasan/GG-Free-Games-and-Giveaways/issues">Report Bug</a>
     ·
