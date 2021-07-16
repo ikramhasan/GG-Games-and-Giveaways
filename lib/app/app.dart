@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/app/wrapper.dart';
-import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
-import 'package:free_games_giveaways/free_games/cubit/free_game_detail_cubit.dart';
+import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
+import 'package:free_games_giveaways/free_games/data/cubit/free_game_detail_cubit.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
