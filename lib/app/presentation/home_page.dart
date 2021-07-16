@@ -3,6 +3,7 @@ import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games/free_games_page.dart';
 import 'package:free_games_giveaways/giveaways/presentation/giveaways_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -71,11 +72,11 @@ class _HomePageState extends State<HomePage> {
           //showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.games_rounded),
+              icon: FaIcon(FontAwesomeIcons.gamepad),
               label: 'Free Games',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.date_range),
+              icon: FaIcon(FontAwesomeIcons.gift),
               label: 'Giveaways',
             ),
           ],
