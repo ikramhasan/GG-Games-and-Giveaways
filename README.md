@@ -51,11 +51,9 @@ Most gaming clients nowadays offer free games very often (Specially EPIC) and I'
 
 ## Roadmap
 
-There are still a lot bugs to fix and a lot of new features to implement. Some of my goals are:
+There are still a lot bugs to fix and a lot of new features to implement.
 
-- [ ] Implement a good filtering system so that uses can filter by platform, release date, etc.
-- [ ] Add better notification system (Open the app after user taps on the notification)
-- [ ] Add monetization?
+Click [here](https://github.com/ikramhasan/GG-Free-Games-and-Giveaways/projects/1) to track the progress and see the updates I'm working on currently.
 
 Go to the [open issues](https://github.com/ikramhasan/GG-Free-Games-and-Giveaways/issues) to report a bug or request a feature.
 
