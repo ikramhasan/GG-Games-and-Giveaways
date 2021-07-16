@@ -1,12 +1,12 @@
 import 'dart:convert';
 
-GameEntity gameEntityFromJson(String str) =>
-    GameEntity.fromJson(json.decode(str));
+FreeGameDetails gameEntityFromJson(String str) =>
+    FreeGameDetails.fromJson(json.decode(str));
 
-String gameEntityToJson(GameEntity data) => json.encode(data.toJson());
+String gameEntityToJson(FreeGameDetails data) => json.encode(data.toJson());
 
-class GameEntity {
-  GameEntity({
+class FreeGameDetails {
+  FreeGameDetails({
     required this.id,
     required this.title,
     required this.thumbnail,
@@ -40,7 +40,8 @@ class GameEntity {
   MinimumSystemRequirements minimumSystemRequirements;
   List<Screenshot> screenshots;
 
-  factory GameEntity.fromJson(Map<String, dynamic> json) => GameEntity(
+  factory FreeGameDetails.fromJson(Map<String, dynamic> json) =>
+      FreeGameDetails(
         id: json["id"],
         title: json["title"],
         thumbnail: json["thumbnail"],

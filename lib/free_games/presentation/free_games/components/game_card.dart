@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
-import 'package:free_games_giveaways/free_games/presentation/components/thumbnail_preview.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_games/components/thumbnail_preview.dart';
 import 'package:free_games_giveaways/free_games/utils/get_genre.dart';
 
 class GameCard extends StatelessWidget {

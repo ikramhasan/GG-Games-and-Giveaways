@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_games_page.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_games/free_games_page.dart';
 import 'package:free_games_giveaways/giveaways/presentation/giveaways_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:free_games_giveaways/game_entity/data/models/game_entity.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/system_requirements_widget.dart';
+import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
+
+import 'system_requirements_widget.dart';
 
 class MinimumSpecSection extends StatelessWidget {
-  final GameEntity game;
+  final FreeGameDetails game;
 
   const MinimumSpecSection({
     Key? key,

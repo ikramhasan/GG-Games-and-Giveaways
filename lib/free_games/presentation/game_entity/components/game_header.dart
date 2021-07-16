@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:getwidget/components/accordion/gf_accordion.dart';
 
 import 'package:free_games_giveaways/app/utils/launch_url.dart';
-import 'package:free_games_giveaways/game_entity/data/models/game_entity.dart';
+import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
 
 class GameHeader extends StatelessWidget {
-  final GameEntity game;
+  final FreeGameDetails game;
 
   const GameHeader({
     Key? key,

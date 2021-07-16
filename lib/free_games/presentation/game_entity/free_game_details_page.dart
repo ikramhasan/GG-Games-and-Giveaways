@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:free_games_giveaways/game_entity/data/cubit/game_entity_cubit.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/about_section.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/game_header.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/minimum_spec_section.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/screenshot_section.dart';
+import 'package:free_games_giveaways/free_games/cubit/free_game_detail_cubit.dart';
+import 'package:free_games_giveaways/free_games/presentation/game_entity/components/game_header.dart';
 
+import 'components/about_section.dart';
 import 'components/button_bar.dart';
+import 'components/minimum_spec_section.dart';
+import 'components/screenshot_section.dart';
 
-class GameEntityPage extends StatelessWidget {
+class FreeGameDetailsPage extends StatelessWidget {
   final int id;
 
-  const GameEntityPage({Key? key, required this.id}) : super(key: key);
+  const FreeGameDetailsPage({Key? key, required this.id}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final bloc = context.read<GameEntityCubit>();
-    bloc.getGameEntity(id);
+    final bloc = context.read<FreeGameDetailsCubit>();
+    bloc.getFreeGameDetails(id);
     return Scaffold(
-      body: BlocConsumer<GameEntityCubit, GameEntityState>(
+      body: BlocConsumer<FreeGameDetailsCubit, FreeGameDetailsState>(
         listener: (context, state) {
-          if (state is GameEntityError) {
+          if (state is FreeGameDetailsError) {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(state.message)));
           }
         },
         builder: (context, state) {
-          if (state is GameEntityLoading) {
+          if (state is FreeGameDetailsLoading) {
             return const Center(
               child: CircularProgressIndicator(),
             );
           }
-          if (state is GameEntityLoaded) {
+          if (state is FreeGameDetailsLoaded) {
             return SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/about_widget.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/button_bar.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/system_requirements_widget.dart';
+import 'package:free_games_giveaways/free_games/presentation/game_entity/components/about_widget.dart';
+import 'package:free_games_giveaways/free_games/presentation/game_entity/components/button_bar.dart';
 import 'package:free_games_giveaways/giveaways/data/models/giveaway.dart';
 
 class GiveawayEntityPage extends StatelessWidget {

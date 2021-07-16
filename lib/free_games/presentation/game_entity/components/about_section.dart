@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/game_entity/data/models/game_entity.dart';
-import 'package:free_games_giveaways/game_entity/presentation/components/about_widget.dart';
+import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
+
+import 'about_widget.dart';
 
 class AboutSection extends StatelessWidget {
-  final GameEntity game;
+  final FreeGameDetails game;
 
   const AboutSection({Key? key, required this.game}) : super(key: key);
   @override

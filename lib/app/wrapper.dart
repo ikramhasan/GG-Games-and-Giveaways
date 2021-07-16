@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
-import 'package:free_games_giveaways/home/presentation/home_page.dart';
+import 'package:free_games_giveaways/app/presentation/home_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/cubit/free_games_cubit.dart';
 
