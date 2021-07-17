@@ -28,6 +28,7 @@ dependencies:
   firebase_core: ^1.3.0
   firebase_messaging: ^10.0.3
   rflutter_alert: ^2.0.2
+  firebase_crashlytics: ^2.1.1
 
 dev_dependencies:
   flutter_test:
