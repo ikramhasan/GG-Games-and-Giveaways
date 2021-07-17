@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games/components/game_card.dart';
+import 'package:free_games_giveaways/free_games/presentation/game_entity/components/filter_widget.dart';
 import 'package:free_games_giveaways/free_games/presentation/game_entity/free_game_details_page.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
@@ -16,16 +17,24 @@ class FreeGamesPage extends StatelessWidget {
         title: Text('Free Games'),
         actions: [
           IconButton(
-            icon: Icon(CupertinoIcons.info),
+            icon: FaIcon(
+              FontAwesomeIcons.filter,
+              size: 22,
+            ),
             onPressed: () {
-              showDialog(
+              showModalBottomSheet(
                 context: context,
-                barrierColor: Colors.black.withOpacity(0.8),
-                builder: (_) => AlertDialog(
-                  backgroundColor: Theme.of(context).cardColor,
-                  content: AboutPage(),
-                ),
+                isScrollControlled: true,
+                builder: (context) => FilterWidget(),
               );
+              // showDialog(
+              //   context: context,
+              //   barrierColor: Colors.black.withOpacity(0.8),
+              //   builder: (_) => AlertDialog(
+              //     backgroundColor: Theme.of(context).cardColor,
+              //     content: FilterWidget(),
+              //   ),
+              // );
             },
           ),
         ],
