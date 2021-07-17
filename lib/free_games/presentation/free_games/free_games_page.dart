@@ -93,16 +93,9 @@ class FreeGamesPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
 
-                  return InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => FreeGameDetailsPage(id: game.id),
-                      ));
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(bottom: 16),
-                      child: GameCard(game: game),
-                    ),
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: GameCard(game: game),
                   );
                 },
               );
