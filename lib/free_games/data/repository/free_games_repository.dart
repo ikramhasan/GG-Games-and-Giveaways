@@ -7,9 +7,14 @@ import 'package:http/http.dart' as http;
 const BASE_URL = 'https://www.freetogame.com/api';
 
 class FreeGamesRepository {
-  getFreeGamesList() async {
-    final Uri url = Uri.parse('$BASE_URL/games');
-    final response = await http.get(url);
+  getFreeGamesList({
+    String? sort,
+    String? platform,
+    String? category,
+  }) async {
+
+    final Uri uri = Uri.parse('$BASE_URL/games');
+    final response = await http.get(uri);
 
     if (response.statusCode == 200) {
       try {

@@ -11,9 +11,8 @@ class FilterWidget extends StatefulWidget {
 
 class _FilterWidgetState extends State<FilterWidget> {
   String sort = '';
-  String platform = '';
-  String categories = '';
-  List<Object?>? categoryValues;
+  String platform = 'all';
+  String category = '';
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +92,7 @@ class _FilterWidgetState extends State<FilterWidget> {
                           child: Text('Browser'),
                         ),
                         FormBuilderFieldOption(
-                          value: 'all ',
+                          value: 'all',
                           child: Text('Any'),
                         ),
                       ],
@@ -105,15 +104,17 @@ class _FilterWidgetState extends State<FilterWidget> {
                           });
                         } else {
                           setState(() {
-                            platform = '';
+                            platform = 'all';
                           });
                         }
                       },
                     ),
                     SizedBox(height: 16),
-                    Text('Category'),
-                    FormBuilderFilterChip(
-                      options: [
+                    Text('Genre'),
+                    FormBuilderDropdown(
+                      name: 'category_form',
+                      hint: Text('Select a Genre'),
+                      items: [
                         'mmorpg',
                         'shooter',
                         'strategy',
@@ -160,20 +161,18 @@ class _FilterWidgetState extends State<FilterWidget> {
                         'horror',
                         'mmorts',
                       ]
-                          .map((lang) => FormBuilderFieldOption(value: lang))
+                          .map(
+                            (val) => DropdownMenuItem(
+                              value: val,
+                              child: Text(val),
+                            ),
+                          )
                           .toList(growable: false),
-                      runSpacing: -8,
-                      spacing: 8,
-                      checkmarkColor: Theme.of(context).accentColor,
-                      onSaved: (newValue) {
-                        print(newValue);
-                      },
                       onChanged: (value) {
                         setState(() {
-                          categoryValues = value!.toList();
+                          category = value.toString();
                         });
                       },
-                      name: 'category_form',
                     ),
                     const Spacer(),
                     Row(
@@ -188,17 +187,32 @@ class _FilterWidgetState extends State<FilterWidget> {
                         SizedBox(width: 32),
                         InkWell(
                           onTap: () {
-                            categoryValues!.isNotEmpty
-                                ? categoryValues!
-                                    .forEach((platform) => setState(() {
-                                          categories = categories +
-                                              platform.toString() +
-                                              '.';
-                                        }))
-                                : print('Empty');
                             print(sort);
                             print(platform);
-                            print(categories);
+                            print(category);
+
+                            String url = 'https://www.freetogame.com/api/games';
+
+                            if (sort.isNotEmpty) {
+                              if (url.contains('?')) {
+                                url = url + '&sort-by=$sort';
+                              } else {
+                                url = url + '?sort-by=$sort';
+                              }
+                            }
+
+                            if (platform.isNotEmpty) {
+                              if (url.contains('?')) {
+                                url = url + '&platform=$platform';
+                              } else {
+                                url = url + '?platform=$platform';
+                              }
+                            }
+                            if (category.isNotEmpty) {
+                              url = url + '&category=$category';
+                            }
+
+                            print(url);
                           },
                           child: FaIcon(
                             FontAwesomeIcons.solidCheckCircle,
