@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../free_games/presentation/free_games/free_games_page.dart';
 import '../../giveaways/presentation/giveaways_page.dart';
@@ -65,16 +66,40 @@ class _HomePageState extends State<HomePage> {
             borderRadius: BorderRadius.circular(8),
           ),
           unselectedItemColor: Theme.of(context).accentColor,
-          selectedItemColor: Theme.of(context).canvasColor,
+          selectedItemColor: Colors.white,
           showSelectedLabels: true,
           backgroundColor: Theme.of(context).cardColor,
-          items: const [
+          selectedLabelStyle:
+              GoogleFonts.merriweather(fontWeight: FontWeight.w900, shadows: [
+            BoxShadow(color: Colors.black, blurRadius: 13.0, spreadRadius: 5.0),
+          ]),
+          items: [
             BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.gamepad),
+              icon: Container(
+                decoration: _selectedItemPosition == 0
+                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade900.withOpacity(0.3),
+                            blurRadius: 10.0,
+                            spreadRadius: 4.0),
+                      ])
+                    : null,
+                child: FaIcon(FontAwesomeIcons.gamepad),
+              ),
               label: 'Free Games',
             ),
             BottomNavigationBarItem(
-              icon: FaIcon(FontAwesomeIcons.gift),
+              icon: Container(
+                decoration: _selectedItemPosition == 1
+                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade900.withOpacity(0.3),
+                            blurRadius: 10.0,
+                            spreadRadius: 4.0),
+                      ])
+                    : null,
+                child: FaIcon(FontAwesomeIcons.gift),
+              ),
               label: 'Giveaways',
             ),
           ],
