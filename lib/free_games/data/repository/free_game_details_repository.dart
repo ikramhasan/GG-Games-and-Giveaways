@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
+
 import 'package:http/http.dart' as http;
+
+import '../models/free_game_details.dart';
 
 const BASE_URL = 'https://www.freetogame.com/api';
 

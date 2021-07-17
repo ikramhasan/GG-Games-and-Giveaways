@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:free_games_giveaways/app/utils/launch_url.dart';
+
+import '../../../../app/utils/launch_url.dart';
 
 enum EntityType { GAME, GIVEAWAY }
 
