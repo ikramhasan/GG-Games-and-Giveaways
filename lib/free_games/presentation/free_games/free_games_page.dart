@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games/components/game_card.dart';
 import 'package:free_games_giveaways/free_games/presentation/game_entity/components/filter_widget.dart';

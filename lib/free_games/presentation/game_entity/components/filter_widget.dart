@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
 
 class FilterWidget extends StatefulWidget {
   FilterWidget({Key? key}) : super(key: key);
@@ -191,28 +193,12 @@ class _FilterWidgetState extends State<FilterWidget> {
                             print(platform);
                             print(category);
 
-                            String url = 'https://www.freetogame.com/api/games';
-
-                            if (sort.isNotEmpty) {
-                              if (url.contains('?')) {
-                                url = url + '&sort-by=$sort';
-                              } else {
-                                url = url + '?sort-by=$sort';
-                              }
-                            }
-
-                            if (platform.isNotEmpty) {
-                              if (url.contains('?')) {
-                                url = url + '&platform=$platform';
-                              } else {
-                                url = url + '?platform=$platform';
-                              }
-                            }
-                            if (category.isNotEmpty) {
-                              url = url + '&category=$category';
-                            }
-
-                            print(url);
+                            Navigator.pop(context);
+                            context.read<FreeGamesCubit>().getFreeGamesList(
+                                  sort: sort,
+                                  platform: platform,
+                                  category: category,
+                                );
                           },
                           child: FaIcon(
                             FontAwesomeIcons.solidCheckCircle,
