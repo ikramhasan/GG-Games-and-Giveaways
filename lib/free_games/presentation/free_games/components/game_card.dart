@@ -14,7 +14,7 @@ class GameCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 192,
+      height: 198,
       width: double.infinity,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,6 +41,7 @@ class GameCard extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
+                        color: Theme.of(context).accentColor,
                       ),
                     ),
                     SizedBox(height: 8),
@@ -49,8 +50,10 @@ class GameCard extends StatelessWidget {
                         game.shortDescription,
                         maxLines: 4,
                         overflow: TextOverflow.ellipsis,
+                        style: TextStyle(fontSize: 14),
                       ),
                     ),
+                    SizedBox(height: 8),
                     buildFooter(),
                   ],
                 ),

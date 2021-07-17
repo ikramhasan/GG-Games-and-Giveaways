@@ -45,12 +45,25 @@ class GiveawayCard extends StatelessWidget {
                     Text(
                       giveaway.title,
                       style: TextStyle(
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                         color: Theme.of(context).accentColor,
                       ),
                     ),
-                    SizedBox(height: 8),
-                    Text(giveaway.description),
+                    giveaway.worth == 'N/A' ? Container() : SizedBox(height: 8),
+                    Text(
+                      giveaway.worth == 'N/A' ? '' : giveaway.worth,
+                      style: TextStyle(
+                        fontSize: 12,
+                        decoration: TextDecoration.lineThrough,
+                        color: Colors.red,
+                      ),
+                    ),
+                    giveaway.worth == 'N/A' ? Container() : SizedBox(height: 8),
+                    Text(
+                      giveaway.description,
+                      style: TextStyle(fontSize: 14),
+                    ),
                   ],
                 ),
               ),

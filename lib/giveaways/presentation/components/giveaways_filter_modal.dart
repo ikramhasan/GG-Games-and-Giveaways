@@ -36,7 +36,7 @@ class GiveawaysFilterModal extends StatelessWidget {
                     Align(
                       child: Text(
                         'Filter',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 22),
                       ),
                       alignment: Alignment.center,
                     ),

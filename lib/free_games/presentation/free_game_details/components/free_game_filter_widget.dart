@@ -36,7 +36,7 @@ class FreeGameFilterWidget extends StatelessWidget {
                     Align(
                       child: Text(
                         'Filter',
-                        style: TextStyle(fontSize: 18),
+                        style: TextStyle(fontSize: 20),
                       ),
                       alignment: Alignment.center,
                     ),
