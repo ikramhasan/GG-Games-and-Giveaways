@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/free_game_filter_widget.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games/components/game_card.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/filter_widget.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_game_details/free_game_details_page.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
@@ -25,7 +25,7 @@ class FreeGamesPage extends StatelessWidget {
               showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
-                builder: (context) => FilterWidget(),
+                builder: (context) => FreeGameFilterWidget(),
               );
             },
           ),

@@ -64,13 +64,9 @@ class GiveawaysFilterModal extends StatelessWidget {
                       spacing: 8,
                       onChanged: (value) {
                         if (value != null) {
-                          //setState(() {
                           sort = value.toString();
-                          //});
                         } else {
-                          //setState(() {
                           sort = '';
-                          //});
                         }
                       },
                     ),
@@ -98,13 +94,9 @@ class GiveawaysFilterModal extends StatelessWidget {
                       spacing: 8,
                       onChanged: (value) {
                         if (value != null) {
-                          //setState(() {
                           type = value.toString();
-                          // });
                         } else {
-                          //setState(() {
                           type = '';
-                          //});
                         }
                       },
                     ),
@@ -141,9 +133,7 @@ class GiveawaysFilterModal extends StatelessWidget {
                           )
                           .toList(growable: false),
                       onChanged: (value) {
-                        //setState(() {
                         platform = value.toString();
-                        //});
                       },
                     ),
                     const Spacer(),

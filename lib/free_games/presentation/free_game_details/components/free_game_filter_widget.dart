@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FilterWidget extends StatefulWidget {
-  FilterWidget({Key? key}) : super(key: key);
+class FreeGameFilterWidget extends StatelessWidget {
+  FreeGameFilterWidget({Key? key}) : super(key: key);
 
-  @override
-  _FilterWidgetState createState() => _FilterWidgetState();
-}
-
-class _FilterWidgetState extends State<FilterWidget> {
   String sort = '';
   String platform = 'all';
   String category = '';
@@ -73,13 +68,9 @@ class _FilterWidgetState extends State<FilterWidget> {
                       spacing: 8,
                       onChanged: (value) {
                         if (value != null) {
-                          setState(() {
-                            sort = value.toString();
-                          });
+                          sort = value.toString();
                         } else {
-                          setState(() {
-                            sort = '';
-                          });
+                          sort = '';
                         }
                       },
                     ),
@@ -107,13 +98,9 @@ class _FilterWidgetState extends State<FilterWidget> {
                       spacing: 8,
                       onChanged: (value) {
                         if (value != null) {
-                          setState(() {
-                            platform = value.toString();
-                          });
+                          platform = value.toString();
                         } else {
-                          setState(() {
-                            platform = 'all';
-                          });
+                          platform = 'all';
                         }
                       },
                     ),
@@ -180,9 +167,7 @@ class _FilterWidgetState extends State<FilterWidget> {
                           )
                           .toList(growable: false),
                       onChanged: (value) {
-                        setState(() {
-                          category = value.toString();
-                        });
+                        category = value.toString();
                       },
                     ),
                     const Spacer(),
