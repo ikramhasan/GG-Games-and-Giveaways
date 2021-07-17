@@ -19,7 +19,7 @@ class _FilterWidgetState extends State<FilterWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.9,
+      height: MediaQuery.of(context).size.height * 0.7,
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.vertical(
@@ -46,7 +46,10 @@ class _FilterWidgetState extends State<FilterWidget> {
                       alignment: Alignment.center,
                     ),
                     SizedBox(height: 8),
-                    Text('Sort by'),
+                    Text(
+                      'Sort by',
+                      style: TextStyle(fontSize: 16),
+                    ),
                     FormBuilderChoiceChip(
                       name: 'sort-by',
                       options: [
@@ -81,7 +84,10 @@ class _FilterWidgetState extends State<FilterWidget> {
                       },
                     ),
                     SizedBox(height: 16),
-                    Text('Platform'),
+                    Text(
+                      'Platform',
+                      style: TextStyle(fontSize: 16),
+                    ),
                     FormBuilderChoiceChip(
                       name: 'platform',
                       options: [
@@ -112,7 +118,10 @@ class _FilterWidgetState extends State<FilterWidget> {
                       },
                     ),
                     SizedBox(height: 16),
-                    Text('Genre'),
+                    Text(
+                      'Genre',
+                      style: TextStyle(fontSize: 16),
+                    ),
                     FormBuilderDropdown(
                       name: 'category_form',
                       hint: Text('Select a Genre'),
