@@ -44,8 +44,14 @@ class FreeGamesCubit extends Cubit<FreeGamesState> {
           await _repository.getFreeGamesList(url) as List<FreeGame>;
 
       emit(FreeGamesLoaded(freeGamesList: freeGamesList));
-    } on SocketException catch (e) {
-      emit(FreeGamesError(message: e.message));
+    } catch (e) {
+      emit(FreeGamesError(
+          message:
+              'No free games available for this filter at this moment. Please try again later'));
+      final List<FreeGame> freeGamesList = await _repository
+          .getFreeGamesList('$BASE_URL/games') as List<FreeGame>;
+
+      emit(FreeGamesLoaded(freeGamesList: freeGamesList));
     }
   }
 }

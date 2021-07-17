@@ -7,6 +7,7 @@ import 'package:free_games_giveaways/free_games/presentation/free_game_details/c
 import 'package:free_games_giveaways/free_games/presentation/free_game_details/free_game_details_page.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class FreeGamesPage extends StatelessWidget {
   @override
@@ -35,8 +36,28 @@ class FreeGamesPage extends StatelessWidget {
         child: BlocConsumer<FreeGamesCubit, FreeGamesState>(
           listener: (context, state) {
             if (state is FreeGamesError) {
-              ScaffoldMessenger.of(context)
-                  .showSnackBar(SnackBar(content: Text(state.message)));
+              Alert(
+                context: context,
+                type: AlertType.error,
+                title: "ERROR",
+                desc: state.message,
+                style: AlertStyle(
+                  backgroundColor: Theme.of(context).cardColor,
+                  titleStyle: TextStyle(color: Colors.red),
+                  descStyle: TextStyle(color: Colors.white),
+                ),
+                buttons: [
+                  DialogButton(
+                    child: Text(
+                      "CLOSE",
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
+                    color: Theme.of(context).accentColor,
+                    onPressed: () => Navigator.pop(context),
+                    width: 120,
+                  )
+                ],
+              ).show();
             }
           },
           builder: (context, state) {
