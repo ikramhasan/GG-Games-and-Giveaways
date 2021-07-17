@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_game_detail_cubit.dart';
-import 'package:free_games_giveaways/free_games/presentation/game_entity/components/game_header.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/game_header.dart';
 
 import 'components/about_section.dart';
 import 'components/button_bar.dart';
