@@ -8,7 +8,6 @@ import 'package:rflutter_alert/rflutter_alert.dart';
 import '../../../app/presentation/about_page.dart';
 import '../../data/cubit/free_games_cubit.dart';
 import '../free_game_details/components/free_game_filter_widget.dart';
-import '../free_game_details/free_game_details_page.dart';
 import 'components/game_card.dart';
 
 class FreeGamesPage extends StatelessWidget {

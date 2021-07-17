@@ -21,22 +21,26 @@ class GameCard extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ThumbnailPreview(imageUrl: game.thumbnail),
+          ThumbnailPreview(imageUrl: game.thumbnail, game: game),
           Flexible(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: Material(
-                color: Theme.of(context).cardColor,
                 borderRadius: BorderRadius.only(
                   bottomRight: Radius.circular(16),
                   topRight: Radius.circular(16),
                 ),
+                color: Theme.of(context).cardColor,
                 child: InkWell(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => FreeGameDetailsPage(id: game.id),
                     ));
                   },
+                  borderRadius: BorderRadius.only(
+                    bottomRight: Radius.circular(16),
+                    topRight: Radius.circular(16),
+                  ),
                   child: Container(
                     padding: EdgeInsets.all(16),
                     child: Column(
