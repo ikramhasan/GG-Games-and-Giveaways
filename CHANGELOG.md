@@ -1,5 +1,7 @@
 # 1.5.0
 
+- Added free games filter options
+- Added giveaway filter options
 - Added better looking icons!
 
 # 1.0.1

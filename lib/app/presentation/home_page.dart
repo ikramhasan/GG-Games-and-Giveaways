@@ -68,8 +68,6 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Theme.of(context).canvasColor,
           showSelectedLabels: true,
           backgroundColor: Theme.of(context).cardColor,
-          selectedLabelStyle: GoogleFonts.montserrat(),
-          //showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.gamepad),
