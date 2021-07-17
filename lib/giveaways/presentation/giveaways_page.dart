@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 import 'package:free_games_giveaways/giveaways/presentation/components/giveaway_card.dart';
@@ -19,7 +20,7 @@ class GiveawaysPage extends StatelessWidget {
           IconButton(
             icon: FaIcon(
               FontAwesomeIcons.filter,
-              size: 22,
+              size: 18,
             ),
             onPressed: () {
               showModalBottomSheet(
@@ -27,6 +28,22 @@ class GiveawaysPage extends StatelessWidget {
                 isScrollControlled: true,
                 barrierColor: Colors.black.withOpacity(0.8),
                 builder: (_) => GiveawaysFilterModal(),
+              );
+            },
+          ),
+          IconButton(
+            icon: FaIcon(
+              FontAwesomeIcons.infoCircle,
+              size: 22,
+            ),
+            onPressed: () {
+              showDialog(
+                context: context,
+                barrierColor: Colors.black.withOpacity(0.8),
+                builder: (context) => AlertDialog(
+                  backgroundColor: Theme.of(context).cardColor,
+                  content: AboutPage(),
+                ),
               );
             },
           ),

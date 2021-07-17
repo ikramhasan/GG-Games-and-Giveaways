@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/free_game_filter_widget.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_games/components/game_card.dart';
@@ -19,13 +20,29 @@ class FreeGamesPage extends StatelessWidget {
           IconButton(
             icon: FaIcon(
               FontAwesomeIcons.filter,
-              size: 22,
+              size: 18,
             ),
             onPressed: () {
               showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
                 builder: (context) => FreeGameFilterWidget(),
+              );
+            },
+          ),
+          IconButton(
+            icon: FaIcon(
+              FontAwesomeIcons.infoCircle,
+              size: 22,
+            ),
+            onPressed: () {
+              showDialog(
+                context: context,
+                barrierColor: Colors.black.withOpacity(0.8),
+                builder: (context) => AlertDialog(
+                  backgroundColor: Theme.of(context).cardColor,
+                  content: AboutPage(),
+                ),
               );
             },
           ),
