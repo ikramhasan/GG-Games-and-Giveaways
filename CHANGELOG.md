@@ -3,6 +3,10 @@
 - Added free games filter options
 - Added giveaway filter options
 - Added better looking icons!
+- Added automatic crash reporting.
+- Changed app fonts
+- UI improvements
+- Bugfixes
 
 # 1.0.1
 
