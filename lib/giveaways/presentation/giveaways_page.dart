@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 import 'package:free_games_giveaways/giveaways/presentation/components/giveaway_card.dart';
+import 'package:free_games_giveaways/giveaways/presentation/components/giveaways_filter_modal.dart';
 
 class GiveawaysPage extends StatelessWidget {
   const GiveawaysPage({Key? key}) : super(key: key);
@@ -15,15 +17,16 @@ class GiveawaysPage extends StatelessWidget {
         title: Text('Giveaways'),
         actions: [
           IconButton(
-            icon: Icon(CupertinoIcons.info),
+            icon: FaIcon(
+              FontAwesomeIcons.filter,
+              size: 22,
+            ),
             onPressed: () {
-              showDialog(
+              showModalBottomSheet(
                 context: context,
+                isScrollControlled: true,
                 barrierColor: Colors.black.withOpacity(0.8),
-                builder: (_) => AlertDialog(
-                  backgroundColor: Theme.of(context).cardColor,
-                  content: AboutPage(),
-                ),
+                builder: (_) => GiveawaysFilterModal(),
               );
             },
           ),

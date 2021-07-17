@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:free_games_giveaways/giveaways/data/models/giveaway.dart';
 
-import '../giveaway_enitity_page.dart';
+import '../giveaway_details_page.dart';
 
 class GiveawayCard extends StatelessWidget {
   const GiveawayCard({Key? key, required this.giveaway}) : super(key: key);
@@ -15,7 +15,7 @@ class GiveawayCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) => GiveawayEntityPage(giveaway: giveaway),
+              builder: (context) => GiveawayDetailsPage(giveaway: giveaway),
             ),
           );
         },

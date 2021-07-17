@@ -3,8 +3,8 @@ import 'package:free_games_giveaways/free_games/presentation/free_game_details/c
 import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/button_bar.dart';
 import 'package:free_games_giveaways/giveaways/data/models/giveaway.dart';
 
-class GiveawayEntityPage extends StatelessWidget {
-  const GiveawayEntityPage({Key? key, required this.giveaway})
+class GiveawayDetailsPage extends StatelessWidget {
+  const GiveawayDetailsPage({Key? key, required this.giveaway})
       : super(key: key);
 
   final Giveaway giveaway;

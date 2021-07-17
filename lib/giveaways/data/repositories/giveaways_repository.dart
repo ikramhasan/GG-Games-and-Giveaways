@@ -6,9 +6,11 @@ import 'package:http/http.dart' as http;
 const BASE_URL = 'https://www.gamerpower.com/api';
 
 class GiveawaysRepository {
-  getGiveawaysList() async {
-    final Uri url = Uri.parse('$BASE_URL/giveaways');
-    final response = await http.get(url);
+  getGiveawaysList(url) async {
+    print(url);
+
+    final Uri uri = Uri.parse(url);
+    final response = await http.get(uri);
 
     if (response.statusCode == 200) {
       try {
