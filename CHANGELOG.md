@@ -1,4 +1,4 @@
-# 1.5.0
+# 2.0.0
 
 - Added free games filter options
 - Added giveaway filter options
