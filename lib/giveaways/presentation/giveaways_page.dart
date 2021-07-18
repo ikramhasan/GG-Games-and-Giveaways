@@ -2,11 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/app/presentation/about_page.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
-import 'package:free_games_giveaways/giveaways/presentation/components/giveaway_card.dart';
-import 'package:free_games_giveaways/giveaways/presentation/components/giveaways_filter_modal.dart';
+
+import '../../app/presentation/about_page.dart';
+import '../data/cubit/giveaways_cubit.dart';
+import 'components/giveaway_card.dart';
+import 'components/giveaways_filter_modal.dart';
 
 class GiveawaysPage extends StatelessWidget {
   const GiveawaysPage({Key? key}) : super(key: key);

@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_game_details/free_game_details_page.dart';
 
 class ThumbnailPreview extends StatelessWidget {
   final String imageUrl;
-
+  final FreeGame game;
   const ThumbnailPreview({
     Key? key,
     required this.imageUrl,
+    required this.game,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,6 @@ class ThumbnailPreview extends StatelessWidget {
           height: 192,
           width: 150,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(16),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
@@ -34,6 +36,19 @@ class ThumbnailPreview extends StatelessWidget {
                 Colors.transparent,
                 Colors.black.withOpacity(0.3),
               ],
+            ),
+          ),
+        ),
+        Positioned.fill(
+          child: Material(
+            color: Colors.transparent,
+            child: InkWell(
+              borderRadius: BorderRadius.circular(16),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => FreeGameDetailsPage(id: game.id),
+                ));
+              },
             ),
           ),
         ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_games/components/thumbnail_preview.dart';
-import 'package:free_games_giveaways/free_games/utils/get_genre.dart';
+
+import '../../../data/models/free_game.dart';
+import '../../../utils/get_genre.dart';
+import '../../free_game_details/free_game_details_page.dart';
+import 'thumbnail_preview.dart';
 
 class GameCard extends StatelessWidget {
   final FreeGame game;
@@ -19,43 +21,54 @@ class GameCard extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ThumbnailPreview(imageUrl: game.thumbnail),
+          ThumbnailPreview(imageUrl: game.thumbnail, game: game),
           Flexible(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Theme.of(context).cardColor,
+              child: Material(
+                borderRadius: BorderRadius.only(
+                  bottomRight: Radius.circular(16),
+                  topRight: Radius.circular(16),
+                ),
+                color: Theme.of(context).cardColor,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => FreeGameDetailsPage(id: game.id),
+                    ));
+                  },
                   borderRadius: BorderRadius.only(
                     bottomRight: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
-                ),
-                padding: EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      game.title,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).accentColor,
-                      ),
+                  child: Container(
+                    padding: EdgeInsets.all(16),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          game.title,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Theme.of(context).accentColor,
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        Expanded(
+                          child: Text(
+                            game.shortDescription,
+                            maxLines: 4,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 14),
+                          ),
+                        ),
+                        SizedBox(height: 8),
+                        buildFooter(),
+                      ],
                     ),
-                    SizedBox(height: 8),
-                    Expanded(
-                      child: Text(
-                        game.shortDescription,
-                        maxLines: 4,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    buildFooter(),
-                  ],
+                  ),
                 ),
               ),
             ),

@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:free_games_giveaways/giveaways/data/models/giveaway.dart';
+
 import 'package:http/http.dart' as http;
+
+import '../models/giveaway.dart';
 
 const BASE_URL = 'https://www.gamerpower.com/api';
 

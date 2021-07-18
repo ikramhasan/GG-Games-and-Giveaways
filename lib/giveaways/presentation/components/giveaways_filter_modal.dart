@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:free_games_giveaways/giveaways/data/cubit/giveaways_cubit.dart';
 
+import '../../data/cubit/giveaways_cubit.dart';
+
+// ignore: must_be_immutable
 class GiveawaysFilterModal extends StatelessWidget {
   GiveawaysFilterModal({Key? key}) : super(key: key);
 

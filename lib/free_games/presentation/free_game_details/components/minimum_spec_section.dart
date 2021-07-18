@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
-
+import '../../../data/models/free_game_details.dart';
 import 'system_requirements_widget.dart';
 
 class MinimumSpecSection extends StatelessWidget {

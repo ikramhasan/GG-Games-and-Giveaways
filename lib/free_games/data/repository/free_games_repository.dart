@@ -1,15 +1,16 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
 import 'package:http/http.dart' as http;
+
+import '../models/free_game.dart';
 
 const BASE_URL = 'https://www.freetogame.com/api';
 
 class FreeGamesRepository {
   getFreeGamesList(String url) async {
     print(url);
-    
+
     final Uri uri = Uri.parse(url);
     final response = await http.get(uri);
 
