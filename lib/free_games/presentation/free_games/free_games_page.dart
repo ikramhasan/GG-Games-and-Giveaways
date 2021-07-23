@@ -87,11 +87,11 @@ class FreeGamesPage extends StatelessWidget {
             }
             if (state is FreeGamesLoaded) {
               return ListView.builder(
+                key: PageStorageKey('free-games-list'),
                 itemCount: state.freeGamesList.length,
                 padding: EdgeInsets.only(top: 16),
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
-
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: GameCard(game: game),

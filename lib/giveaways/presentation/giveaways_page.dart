@@ -62,6 +62,7 @@ class GiveawaysPage extends StatelessWidget {
 
             if (state is GiveawaysLoaded) {
               return ListView.builder(
+                key: PageStorageKey('giveaways-list'),
                 itemCount: state.giveawaysList.length,
                 itemBuilder: (context, index) {
                   final giveaway = state.giveawaysList[index];
