@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/app/utils/launch_url.dart';
+
+import '../utils/launch_url.dart';
 
 class AboutPage extends StatelessWidget {
   @override

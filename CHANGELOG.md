@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+=======
+# 2.5.0+3
+
+- Fixed Animations.
+- Fixed Page Scroll State Persistance.
+- Minor Bugfixes.
+
+>>>>>>> master
 # 2.0.0
 
 - Added free games filter options

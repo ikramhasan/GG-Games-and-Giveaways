@@ -1,9 +1,8 @@
-import 'dart:io';
-
 import 'package:bloc/bloc.dart';
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
-import 'package:free_games_giveaways/free_games/data/repository/free_games_repository.dart';
 import 'package:meta/meta.dart';
+
+import '../models/free_game.dart';
+import '../repository/free_games_repository.dart';
 
 part 'free_games_state.dart';
 

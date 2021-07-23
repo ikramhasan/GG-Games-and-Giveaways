@@ -1,9 +1,5 @@
 This update includes:
 
-- Free games filter options
-- Giveaway filter options
-- Better looking icons!
-- Automatic crash reporting.
-- New app fonts
-- UI improvements
-- Bugfixes
+- Fixed Animations.
+- Fixed Page Scroll State Persistance.
+- Minor Bugfixes.

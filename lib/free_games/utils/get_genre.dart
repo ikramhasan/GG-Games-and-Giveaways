@@ -1,4 +1,4 @@
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
+import '../data/models/free_game.dart';
 
 String getGenreString(Genre genre) {
   switch (genre) {

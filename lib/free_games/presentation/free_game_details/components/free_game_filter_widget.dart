@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/free_games/data/cubit/free_games_cubit.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../data/cubit/free_games_cubit.dart';
+
+// ignore: must_be_immutable
 class FreeGameFilterWidget extends StatelessWidget {
   FreeGameFilterWidget({Key? key}) : super(key: key);
 

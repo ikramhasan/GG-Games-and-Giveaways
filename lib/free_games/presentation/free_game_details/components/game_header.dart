@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/accordion/gf_accordion.dart';
 
-import 'package:free_games_giveaways/app/utils/launch_url.dart';
-import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
+import '../../../../app/utils/launch_url.dart';
+import '../../../data/models/free_game_details.dart';
 
 class GameHeader extends StatelessWidget {
   final FreeGameDetails game;
