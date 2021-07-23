@@ -27,6 +27,7 @@ class ThumbnailPreview extends StatelessWidget {
           height: 192,
           width: 150,
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
