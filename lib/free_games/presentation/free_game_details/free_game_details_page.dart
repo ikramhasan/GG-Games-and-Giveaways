@@ -45,7 +45,7 @@ class FreeGameDetailsPage extends StatelessWidget {
                   ),
                   ScreenshotSection(game: state.game),
                   MinimumSpecSection(game: state.game),
-                  SizedBox(height: 8),
+                  SizedBox(height: 32),
                 ],
               ),
             );
