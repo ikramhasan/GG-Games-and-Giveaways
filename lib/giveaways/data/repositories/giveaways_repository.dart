@@ -9,8 +9,6 @@ const BASE_URL = 'https://www.gamerpower.com/api';
 
 class GiveawaysRepository {
   getGiveawaysList(url) async {
-    print(url);
-
     final Uri uri = Uri.parse(url);
     final response = await http.get(uri);
 

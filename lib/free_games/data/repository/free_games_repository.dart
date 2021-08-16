@@ -9,7 +9,6 @@ const BASE_URL = 'https://www.freetogame.com/api';
 
 class FreeGamesRepository {
   getFreeGamesList(String url) async {
-    print(url);
 
     final Uri uri = Uri.parse(url);
     final response = await http.get(uri);

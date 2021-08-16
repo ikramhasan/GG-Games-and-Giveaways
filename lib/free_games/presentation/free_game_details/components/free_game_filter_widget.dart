@@ -185,9 +185,6 @@ class FreeGameFilterWidget extends StatelessWidget {
                         SizedBox(width: 32),
                         InkWell(
                           onTap: () {
-                            print(sort);
-                            print(platform);
-                            print(category);
 
                             Navigator.pop(context);
                             context.read<FreeGamesCubit>().getFreeGamesList(
