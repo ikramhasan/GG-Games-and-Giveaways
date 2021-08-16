@@ -79,6 +79,16 @@ class FreeGameDetails {
         "minimum_system_requirements": minimumSystemRequirements.toJson(),
         "screenshots": List<dynamic>.from(screenshots.map((x) => x.toJson())),
       };
+
+  bool operator ==(o) =>
+      o is FreeGameDetails &&
+      title == o.title &&
+      id == o.id &&
+      thumbnail == o.thumbnail &&
+      shortDescription == o.shortDescription &&
+      description == o.description &&
+      genre == o.genre &&
+      gameUrl == o.gameUrl;
 }
 
 class MinimumSystemRequirements {
