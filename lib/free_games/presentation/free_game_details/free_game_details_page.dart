@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/utils/show_error.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 import '../../data/cubit/free_game_detail_cubit.dart';
 import 'components/about_section.dart';
@@ -20,8 +22,7 @@ class FreeGameDetailsPage extends StatelessWidget {
       body: BlocConsumer<FreeGameDetailsCubit, FreeGameDetailsState>(
         listener: (context, state) {
           if (state is FreeGameDetailsError) {
-            ScaffoldMessenger.of(context)
-                .showSnackBar(SnackBar(content: Text(state.message)));
+            showError(context, state.message);
           }
         },
         builder: (context, state) {

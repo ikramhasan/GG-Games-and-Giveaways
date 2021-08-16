@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
+import 'package:free_games_giveaways/app/utils/show_error.dart';
 
 import '../../app/presentation/about_page.dart';
 import '../data/cubit/giveaways_cubit.dart';
@@ -78,28 +78,7 @@ class GiveawaysPage extends StatelessWidget {
           },
           listener: (context, state) {
             if (state is GiveawaysError) {
-              Alert(
-                context: context,
-                type: AlertType.error,
-                title: "ERROR",
-                desc: state.message,
-                style: AlertStyle(
-                  backgroundColor: Theme.of(context).cardColor,
-                  titleStyle: TextStyle(color: Colors.red),
-                  descStyle: TextStyle(color: Colors.white),
-                ),
-                buttons: [
-                  DialogButton(
-                    child: Text(
-                      "CLOSE",
-                      style: TextStyle(color: Colors.black, fontSize: 18),
-                    ),
-                    color: Theme.of(context).accentColor,
-                    onPressed: () => Navigator.pop(context),
-                    width: 120,
-                  )
-                ],
-              ).show();
+              showError(context, state.message);
             }
           },
         ),
