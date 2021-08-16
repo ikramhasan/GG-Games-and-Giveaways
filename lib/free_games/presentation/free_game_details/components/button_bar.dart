@@ -41,7 +41,7 @@ class KButtonBar extends StatelessWidget {
                     : 'Go to Giveaway',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Colors.white,
+                  color: Theme.of(context).accentColor,
                 ),
               ),
             ),
@@ -60,7 +60,7 @@ class KButtonBar extends StatelessWidget {
             },
             child: Icon(
               Icons.share,
-              color: Colors.white,
+              color: Theme.of(context).accentColor,
             ),
           )
         ],

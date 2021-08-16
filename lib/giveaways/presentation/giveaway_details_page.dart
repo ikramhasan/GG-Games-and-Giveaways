@@ -53,6 +53,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
+                      color: Theme.of(context).accentColor,
                     ),
                   ),
                   SizedBox(height: 32),

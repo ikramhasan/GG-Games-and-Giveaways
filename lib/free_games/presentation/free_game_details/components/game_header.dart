@@ -52,6 +52,7 @@ class GameHeader extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
+                  color: Theme.of(context).accentColor,
                 ),
               ),
               ElevatedButton(
@@ -68,7 +69,7 @@ class GameHeader extends StatelessWidget {
                   'Get the Game',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: Theme.of(context).accentColor,
                   ),
                 ),
               ),
