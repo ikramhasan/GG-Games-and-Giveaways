@@ -12,10 +12,7 @@ class GiveawayCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: InkWell(
-        borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(6),
-          bottomRight: Radius.circular(6),
-        ),
+        borderRadius: BorderRadius.circular(6),
         onTap: () {
           Navigator.of(context).push(
             MaterialPageRoute(
@@ -28,9 +25,13 @@ class GiveawayCard extends StatelessWidget {
           children: [
             Hero(
               tag: giveaway.image,
-              child: Material(
-                child: Ink.image(
-                  image: NetworkImage(giveaway.image),
+              child: ClipRRect(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(6),
+                  topRight: Radius.circular(6),
+                ),
+                child: Image.network(
+                  giveaway.image,
                   height: 150,
                   width: MediaQuery.of(context).size.width - 32 - 8,
                   fit: BoxFit.cover,
