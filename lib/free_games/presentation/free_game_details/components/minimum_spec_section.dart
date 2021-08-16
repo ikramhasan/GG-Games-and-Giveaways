@@ -25,23 +25,23 @@ class MinimumSpecSection extends StatelessWidget {
           SizedBox(height: 8),
           SystemRequirementsWidget(
             text1: 'OS',
-            text2: game.minimumSystemRequirements.os,
+            text2: game.minimumSystemRequirements.os ?? 'N/A',
           ),
           SystemRequirementsWidget(
             text1: 'Processor',
-            text2: game.minimumSystemRequirements.processor,
+            text2: game.minimumSystemRequirements.processor ?? 'N/A',
           ),
           SystemRequirementsWidget(
             text1: 'Memory',
-            text2: game.minimumSystemRequirements.memory,
+            text2: game.minimumSystemRequirements.memory ?? 'N/A',
           ),
           SystemRequirementsWidget(
             text1: 'Graphics',
-            text2: game.minimumSystemRequirements.graphics,
+            text2: game.minimumSystemRequirements.graphics ?? 'N/A',
           ),
           SystemRequirementsWidget(
             text1: 'Storage',
-            text2: game.minimumSystemRequirements.storage,
+            text2: game.minimumSystemRequirements.storage ?? 'N/A',
           ),
         ],
       ),

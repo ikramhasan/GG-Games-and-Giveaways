@@ -88,23 +88,29 @@ class FreeGameDetails {
       shortDescription == o.shortDescription &&
       description == o.description &&
       genre == o.genre &&
-      gameUrl == o.gameUrl;
+      gameUrl == o.gameUrl &&
+      minimumSystemRequirements == o.minimumSystemRequirements;
+
+  @override
+  String toString() {
+    return 'FreeGameDetails(id: $id, title: $title, genre: $genre, minimul_requirements: $minimumSystemRequirements)';
+  }
 }
 
 class MinimumSystemRequirements {
   MinimumSystemRequirements({
-    required this.os,
-    required this.processor,
-    required this.memory,
-    required this.graphics,
-    required this.storage,
+    this.os,
+    this.processor,
+    this.memory,
+    this.graphics,
+    this.storage,
   });
 
-  String os;
-  String processor;
-  String memory;
-  String graphics;
-  String storage;
+  String? os;
+  String? processor;
+  String? memory;
+  String? graphics;
+  String? storage;
 
   factory MinimumSystemRequirements.fromJson(Map<String, dynamic> json) =>
       MinimumSystemRequirements(
@@ -122,6 +128,14 @@ class MinimumSystemRequirements {
         "graphics": graphics,
         "storage": storage,
       };
+
+  bool operator ==(o) =>
+      o is MinimumSystemRequirements &&
+      os == o.os &&
+      processor == o.processor &&
+      memory == o.memory &&
+      graphics == o.graphics &&
+      storage == o.storage;
 }
 
 class Screenshot {
@@ -142,4 +156,6 @@ class Screenshot {
         "id": id,
         "image": image,
       };
+
+  bool operator ==(o) => o is Screenshot && id == o.id && image == o.image;
 }
