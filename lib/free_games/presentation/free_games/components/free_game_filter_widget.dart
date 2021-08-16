@@ -177,15 +177,19 @@ class FreeGameFilterWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FaIcon(
-                          FontAwesomeIcons.solidTimesCircle,
-                          size: 40,
-                          color: Colors.red,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.solidTimesCircle,
+                            size: 40,
+                            color: Colors.red,
+                          ),
                         ),
                         SizedBox(width: 32),
                         InkWell(
                           onTap: () {
-
                             Navigator.pop(context);
                             context.read<FreeGamesCubit>().getFreeGamesList(
                                   sort: sort,

@@ -7,7 +7,7 @@ import 'package:getwidget/getwidget.dart';
 
 import '../../../app/presentation/about_page.dart';
 import '../../data/cubit/free_games_cubit.dart';
-import '../free_game_details/components/free_game_filter_widget.dart';
+import 'components/free_game_filter_widget.dart';
 import 'components/game_card.dart';
 
 class FreeGamesPage extends StatelessWidget {

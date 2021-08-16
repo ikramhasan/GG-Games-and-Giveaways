@@ -143,10 +143,15 @@ class GiveawaysFilterModal extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        FaIcon(
-                          FontAwesomeIcons.solidTimesCircle,
-                          size: 40,
-                          color: Colors.red,
+                        InkWell(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: FaIcon(
+                            FontAwesomeIcons.solidTimesCircle,
+                            size: 40,
+                            color: Colors.red,
+                          ),
                         ),
                         SizedBox(width: 32),
                         InkWell(
