@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
               controller: _pageController,
               onPageChanged: _onPageChanged,
               children: <Widget>[
-                FreeGamesPage(),
                 GiveawaysPage(),
+                FreeGamesPage(),
               ],
             ),
           ),
@@ -76,20 +76,6 @@ class _HomePageState extends State<HomePage> {
           items: [
             BottomNavigationBarItem(
               icon: Container(
-                decoration: _selectedItemPosition == 0
-                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.shade900.withOpacity(0.3),
-                            blurRadius: 10.0,
-                            spreadRadius: 4.0),
-                      ])
-                    : null,
-                child: FaIcon(FontAwesomeIcons.gamepad),
-              ),
-              label: 'Free Games',
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
                 decoration: _selectedItemPosition == 1
                     ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
                         BoxShadow(
@@ -101,6 +87,20 @@ class _HomePageState extends State<HomePage> {
                 child: FaIcon(FontAwesomeIcons.gift),
               ),
               label: 'Giveaways',
+            ),
+            BottomNavigationBarItem(
+              icon: Container(
+                decoration: _selectedItemPosition == 0
+                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
+                        BoxShadow(
+                            color: Colors.grey.shade900.withOpacity(0.3),
+                            blurRadius: 10.0,
+                            spreadRadius: 4.0),
+                      ])
+                    : null,
+                child: FaIcon(FontAwesomeIcons.gamepad),
+              ),
+              label: 'Free Games',
             ),
           ],
           currentIndex: _selectedItemPosition,
