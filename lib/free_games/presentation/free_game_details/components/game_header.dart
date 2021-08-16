@@ -18,11 +18,14 @@ class GameHeader extends StatelessWidget {
       children: [
         Stack(
           children: [
-            Image.network(
-              game.thumbnail,
-              height: 225,
-              width: double.infinity,
-              fit: BoxFit.contain,
+            Hero(
+              tag: game.thumbnail,
+              child: Image.network(
+                game.thumbnail,
+                height: 225,
+                width: double.infinity,
+                fit: BoxFit.contain,
+              ),
             ),
             Container(
               height: 225,

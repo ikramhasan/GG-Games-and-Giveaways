@@ -16,11 +16,14 @@ class ThumbnailPreview extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
-          child: Image.network(
-            imageUrl,
-            height: 192,
-            width: 150,
-            fit: BoxFit.cover,
+          child: Hero(
+            tag: imageUrl,
+            child: Image.network(
+              imageUrl,
+              height: 192,
+              width: 150,
+              fit: BoxFit.cover,
+            ),
           ),
         ),
         Container(

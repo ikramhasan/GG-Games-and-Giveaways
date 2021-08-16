@@ -19,11 +19,14 @@ class GiveawayDetailsPage extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Image.network(
-                  giveaway.image,
-                  height: 225,
-                  width: double.infinity,
-                  fit: BoxFit.contain,
+                Hero(
+                  tag: giveaway.image,
+                  child: Image.network(
+                    giveaway.image,
+                    height: 225,
+                    width: double.infinity,
+                    fit: BoxFit.contain,
+                  ),
                 ),
                 Container(
                   height: 225,

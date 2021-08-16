@@ -26,11 +26,16 @@ class GiveawayCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Ink.image(
-              image: NetworkImage(giveaway.image),
-              height: 150,
-              width: MediaQuery.of(context).size.width - 32 - 8,
-              fit: BoxFit.cover,
+            Hero(
+              tag: giveaway.image,
+              child: Material(
+                child: Ink.image(
+                  image: NetworkImage(giveaway.image),
+                  height: 150,
+                  width: MediaQuery.of(context).size.width - 32 - 8,
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
