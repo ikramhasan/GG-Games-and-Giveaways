@@ -28,6 +28,8 @@ class ScreenshotSection extends StatelessWidget {
           SizedBox(height: 8),
           GFCarousel(
             autoPlay: true,
+            enableInfiniteScroll: true,
+            enlargeMainPage: true,
             pagerSize: double.infinity,
             items: game.screenshots.map(
               (url) {
