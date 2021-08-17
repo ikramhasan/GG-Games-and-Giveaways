@@ -52,6 +52,22 @@ class FreeGame {
         "release_date": releaseDate,
         "freetogame_profile_url": freetogameProfileUrl,
       };
+
+  bool operator ==(o) =>
+      o is FreeGame &&
+      title == o.title &&
+      id == o.id &&
+      thumbnail == o.thumbnail &&
+      shortDescription == o.shortDescription &&
+      freetogameProfileUrl == o.freetogameProfileUrl &&
+      genre == o.genre &&
+      gameUrl == o.gameUrl &&
+      publisher == o.publisher;
+
+  @override
+  String toString() {
+    return 'FreeGame(id: $id, title: $title, genre: $genre, publisher: $publisher)';
+  }
 }
 
 enum Genre {

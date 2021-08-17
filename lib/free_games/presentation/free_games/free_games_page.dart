@@ -57,13 +57,6 @@ class FreeGamesPage extends StatelessWidget {
             }
           },
           builder: (context, state) {
-            if (state is FreeGamesLoading) {
-              return const Center(
-                child: GFLoader(
-                  type: GFLoaderType.android,
-                ),
-              );
-            }
             if (state is FreeGamesLoaded) {
               return ListView.builder(
                 key: PageStorageKey('free-games-list'),
@@ -78,7 +71,11 @@ class FreeGamesPage extends StatelessWidget {
                 },
               );
             }
-            return Container();
+            return const Center(
+              child: GFLoader(
+                type: GFLoaderType.android,
+              ),
+            );
           },
         ),
       ),

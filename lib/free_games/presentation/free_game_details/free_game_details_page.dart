@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/app/utils/show_error.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
-
 import '../../data/cubit/free_game_detail_cubit.dart';
 import 'components/about_section.dart';
 import 'components/button_bar.dart';
