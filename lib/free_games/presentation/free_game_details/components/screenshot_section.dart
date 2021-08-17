@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_game_details/screenshot_page.dart';
 import 'package:getwidget/components/carousel/gf_carousel.dart';
 
 import '../../../data/models/free_game_details.dart';
@@ -32,15 +33,24 @@ class ScreenshotSection extends StatelessWidget {
             enlargeMainPage: true,
             pagerSize: double.infinity,
             items: game.screenshots.map(
-              (url) {
-                return Container(
-                  margin: EdgeInsets.all(8.0),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    child: Image.network(
-                      url.image,
-                      fit: BoxFit.cover,
-                      width: double.infinity,
+              (screenshot) {
+                return InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ScreenshotPage(
+                        imageUrl: screenshot.image,
+                      ),
+                    ));
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(8.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      child: Image.network(
+                        screenshot.image,
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
                     ),
                   ),
                 );
