@@ -16,9 +16,9 @@ class AboutSection extends StatelessWidget {
         children: [
           Text(
             'About ${game.title}',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           AboutWidget(
             prefix1: 'Game',
             prefix2: 'Genre',

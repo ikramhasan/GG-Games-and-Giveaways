@@ -6,15 +6,18 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 import 'app/app.dart';
 
+// ignore_for_file: avoid_void_async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await Firebase.initializeApp();
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
 
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, // transparent status bar
-  ));
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent, // transparent status bar
+    ),
+  );
 
   LicenseRegistry.addLicense(() async* {
     final license = await rootBundle.loadString('assets/licenses/OFL.txt');

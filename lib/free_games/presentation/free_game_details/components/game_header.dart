@@ -34,7 +34,7 @@ class GameHeader extends StatelessWidget {
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  stops: [0.8, 1],
+                  stops: const [0.8, 1],
                   colors: [
                     Colors.transparent,
                     Theme.of(context).canvasColor,
@@ -44,7 +44,7 @@ class GameHeader extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
@@ -83,7 +83,7 @@ class GameHeader extends StatelessWidget {
           title: game.shortDescription,
           content: game.description,
           collapsedTitleBackgroundColor: Theme.of(context).canvasColor,
-          textStyle: TextStyle(color: Colors.white),
+          textStyle: const TextStyle(color: Colors.white),
           expandedTitleBackgroundColor: Theme.of(context).cardColor,
           contentBackgroundColor: Theme.of(context).cardColor,
           expandedIcon: Text(

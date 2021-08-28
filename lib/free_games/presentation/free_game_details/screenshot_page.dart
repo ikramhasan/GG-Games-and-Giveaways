@@ -11,8 +11,6 @@ class ScreenshotPage extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: InteractiveViewer(
-          scaleEnabled: true,
-          panEnabled: true,
           child: Image.network(
             imageUrl,
             height: MediaQuery.of(context).size.height,

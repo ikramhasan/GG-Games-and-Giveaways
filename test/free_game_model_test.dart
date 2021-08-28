@@ -64,13 +64,7 @@ void main() {
     developer: "Gaijin",
     releaseDate: DateTime.parse("2017-05-30"),
     freetogameProfileUrl: "https://www.freetogame.com/crossout",
-    minimumSystemRequirements: MinimumSystemRequirements(
-      os: null,
-      processor: null,
-      memory: null,
-      graphics: null,
-      storage: null,
-    ),
+    minimumSystemRequirements: MinimumSystemRequirements(),
     screenshots: [
       Screenshot(
         id: 22,
@@ -96,7 +90,7 @@ void main() {
     () {
       // arrange
       final Map<String, dynamic> jsonMap =
-          jsonDecode(fixture('free_game.json'));
+          jsonDecode(fixture('free_game.json')) as Map<String, dynamic>;
       // act
       final result = FreeGameDetails.fromJson(jsonMap);
       // assert
@@ -109,7 +103,7 @@ void main() {
     () {
       // arrange
       final Map<String, dynamic> jsonMap =
-          jsonDecode(fixture('free_game_null.json'));
+          jsonDecode(fixture('free_game_null.json')) as Map<String, dynamic>;
       // act
       final result = FreeGameDetails.fromJson(jsonMap);
       // assert

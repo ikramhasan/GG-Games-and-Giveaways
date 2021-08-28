@@ -16,15 +16,13 @@ class ProgressImage extends StatelessWidget {
         ImageChunkEvent? loadingProgress,
       ) {
         if (loadingProgress == null) return child;
-        return Container(
-          child: Center(
-            child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(Colors.redAccent),
-              value: loadingProgress.expectedTotalBytes != null
-                  ? loadingProgress.cumulativeBytesLoaded /
-                      loadingProgress.expectedTotalBytes!
-                  : null,
-            ),
+        return Center(
+          child: CircularProgressIndicator(
+            valueColor: const AlwaysStoppedAnimation(Colors.redAccent),
+            value: loadingProgress.expectedTotalBytes != null
+                ? loadingProgress.cumulativeBytesLoaded /
+                    loadingProgress.expectedTotalBytes!
+                : null,
           ),
         );
       },

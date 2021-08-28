@@ -19,17 +19,16 @@ class ScreenshotSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+          const Padding(
+            padding: EdgeInsets.only(left: 16.0),
             child: Text(
               'Screenshots',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           GFCarousel(
             autoPlay: true,
-            enableInfiniteScroll: true,
             enlargeMainPage: true,
             pagerSize: double.infinity,
             items: game.screenshots.map(
@@ -43,9 +42,10 @@ class ScreenshotSection extends StatelessWidget {
                     ));
                   },
                   child: Container(
-                    margin: EdgeInsets.all(8.0),
+                    margin: const EdgeInsets.all(8.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(5.0)),
                       child: Image.network(
                         screenshot.image,
                         fit: BoxFit.cover,

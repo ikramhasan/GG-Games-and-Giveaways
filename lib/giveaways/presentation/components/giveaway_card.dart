@@ -26,7 +26,7 @@ class GiveawayCard extends StatelessWidget {
             Hero(
               tag: giveaway.image,
               child: ClipRRect(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(6),
                   topRight: Radius.circular(6),
                 ),
@@ -51,19 +51,25 @@ class GiveawayCard extends StatelessWidget {
                       color: Theme.of(context).accentColor,
                     ),
                   ),
-                  giveaway.worth == 'N/A' ? Container() : SizedBox(height: 8),
+                  if (giveaway.worth == 'N/A')
+                    Container()
+                  else
+                    const SizedBox(height: 8),
                   Text(
                     giveaway.worth == 'N/A' ? '' : giveaway.worth,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 12,
                       decoration: TextDecoration.lineThrough,
                       color: Colors.red,
                     ),
                   ),
-                  giveaway.worth == 'N/A' ? Container() : SizedBox(height: 8),
+                  if (giveaway.worth == 'N/A')
+                    Container()
+                  else
+                    const SizedBox(height: 8),
                   Text(
                     giveaway.description,
-                    style: TextStyle(fontSize: 14),
+                    style: const TextStyle(fontSize: 14),
                   ),
                 ],
               ),

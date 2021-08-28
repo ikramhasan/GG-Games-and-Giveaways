@@ -12,7 +12,7 @@ class AboutPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 8),
+              const SizedBox(height: 8),
               Text(
                 'GG',
                 style: TextStyle(
@@ -20,48 +20,48 @@ class AboutPage extends StatelessWidget {
                   color: Theme.of(context).accentColor,
                 ),
               ),
-              SizedBox(height: 8),
-              Text(
+              const SizedBox(height: 8),
+              const Text(
                 'by Ikram Hasan',
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey,
                 ),
               ),
-              SizedBox(height: 8),
-              Divider(color: Colors.grey),
+              const SizedBox(height: 8),
+              const Divider(color: Colors.grey),
               ListTile(
                 leading: Icon(
                   CupertinoIcons.mail,
                   color: Theme.of(context).accentColor,
                 ),
-                title: Text(
+                title: const  Text(
                   'Report a bug!',
                 ),
                 onTap: () {
                   sendMail('General');
                 },
               ),
-              Divider(color: Colors.grey),
+              const Divider(color: Colors.grey),
               ListTile(
                 leading: Icon(
                   CupertinoIcons.person_alt_circle,
                   color: Theme.of(context).accentColor,
                 ),
-                title: Text(
+                title: const  Text(
                   'About me',
                 ),
                 onTap: () {
                   launchURL('https://ikramhasan-portfolio.web.app/');
                 },
               ),
-              Divider(color: Colors.grey),
+              const Divider(color: Colors.grey),
               ListTile(
                 leading: Icon(
                   CupertinoIcons.square_stack_3d_down_right,
                   color: Theme.of(context).accentColor,
                 ),
-                title: Text(
+                title:const  Text(
                   'More apps',
                 ),
                 onTap: () {
@@ -69,8 +69,8 @@ class AboutPage extends StatelessWidget {
                       'https://play.google.com/store/search?q=pub%3AIkram%20Hasan&c=apps');
                 },
               ),
-              Divider(color: Colors.grey),
-              SizedBox(height: 34),
+              const Divider(color: Colors.grey),
+              const SizedBox(height: 34),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [

@@ -17,14 +17,14 @@ class SystemRequirementsWidget extends StatelessWidget {
       children: [
         Text(
           '$text1:',
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         Text(
           text2,
-          style: TextStyle(color: Colors.grey),
+          style: const TextStyle(color: Colors.grey),
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
       ],
     );
   }

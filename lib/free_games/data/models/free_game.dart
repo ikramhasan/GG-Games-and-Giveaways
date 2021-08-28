@@ -26,17 +26,17 @@ class FreeGame {
   String freetogameProfileUrl;
 
   factory FreeGame.fromJson(Map<String, dynamic> json) => FreeGame(
-        id: json["id"],
-        title: json["title"],
-        thumbnail: json["thumbnail"],
-        shortDescription: json["short_description"],
-        gameUrl: json["game_url"],
+        id: json["id"] as int,
+        title: json["title"] as String,
+        thumbnail: json["thumbnail"] as String,
+        shortDescription: json["short_description"] as String,
+        gameUrl: json["game_url"] as String,
         genre: genreValues.map[json["genre"]],
         platform: platformValues.map[json["platform"]],
-        publisher: json["publisher"],
-        developer: json["developer"],
-        releaseDate: json["release_date"],
-        freetogameProfileUrl: json["freetogame_profile_url"],
+        publisher: json["publisher"] as String,
+        developer: json["developer"] as String,
+        releaseDate: json["release_date"] as String,
+        freetogameProfileUrl: json["freetogame_profile_url"] as String,
       );
 
   Map<String, dynamic> toJson() => {
@@ -53,6 +53,7 @@ class FreeGame {
         "freetogame_profile_url": freetogameProfileUrl,
       };
 
+  @override
   bool operator ==(o) =>
       o is FreeGame &&
       title == o.title &&
@@ -70,6 +71,8 @@ class FreeGame {
   }
 }
 
+
+// ignore_for_file: constant_identifier_names
 enum Genre {
   MMORPG,
   SHOOTER,
@@ -123,9 +126,7 @@ class EnumValues<T> {
   EnumValues(this.map);
 
   Map<T, String> get reverse {
-    if (reverseMap == null) {
-      reverseMap = map.map((k, v) => new MapEntry(v, k));
-    }
+    reverseMap ??= map.map((k, v) => MapEntry(v, k));
     return reverseMap!;
   }
 }

@@ -15,10 +15,10 @@ class FreeGamesPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Free Games'),
+        title: const Text('Free Games'),
         actions: [
           IconButton(
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.filter,
               size: 18,
             ),
@@ -31,7 +31,7 @@ class FreeGamesPage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.infoCircle,
               size: 22,
             ),
@@ -59,9 +59,9 @@ class FreeGamesPage extends StatelessWidget {
           builder: (context, state) {
             if (state is FreeGamesLoaded) {
               return ListView.builder(
-                key: PageStorageKey('free-games-list'),
+                key: const PageStorageKey('free-games-list'),
                 itemCount: state.freeGamesList.length,
-                padding: EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 16),
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
                   return Padding(
@@ -72,9 +72,7 @@ class FreeGamesPage extends StatelessWidget {
               );
             }
             return const Center(
-              child: GFLoader(
-                type: GFLoaderType.android,
-              ),
+              child: GFLoader(),
             );
           },
         ),

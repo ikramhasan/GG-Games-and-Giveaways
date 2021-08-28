@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
               controller: _pageController,
               onPageChanged: _onPageChanged,
               children: <Widget>[
-                GiveawaysPage(),
+                const GiveawaysPage(),
                 FreeGamesPage(),
               ],
             ),
@@ -71,34 +71,38 @@ class _HomePageState extends State<HomePage> {
           backgroundColor: Theme.of(context).cardColor,
           selectedLabelStyle:
               GoogleFonts.merriweather(fontWeight: FontWeight.w900, shadows: [
-            BoxShadow(color: Colors.black, blurRadius: 13.0, spreadRadius: 5.0),
+            const BoxShadow(
+              //color: Colors.black,
+              blurRadius: 13.0,
+              spreadRadius: 5.0,
+            ),
           ]),
           items: [
             BottomNavigationBarItem(
               icon: Container(
                 decoration: _selectedItemPosition == 1
-                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
+                    ? BoxDecoration(boxShadow: [
                         BoxShadow(
                             color: Colors.grey.shade900.withOpacity(0.3),
                             blurRadius: 10.0,
                             spreadRadius: 4.0),
                       ])
                     : null,
-                child: FaIcon(FontAwesomeIcons.gift),
+                child: const FaIcon(FontAwesomeIcons.gift),
               ),
               label: 'Giveaways',
             ),
             BottomNavigationBarItem(
               icon: Container(
                 decoration: _selectedItemPosition == 0
-                    ? BoxDecoration(shape: BoxShape.rectangle, boxShadow: [
+                    ? BoxDecoration(boxShadow: [
                         BoxShadow(
                             color: Colors.grey.shade900.withOpacity(0.3),
                             blurRadius: 10.0,
                             spreadRadius: 4.0),
                       ])
                     : null,
-                child: FaIcon(FontAwesomeIcons.gamepad),
+                child: const FaIcon(FontAwesomeIcons.gamepad),
               ),
               label: 'Free Games',
             ),

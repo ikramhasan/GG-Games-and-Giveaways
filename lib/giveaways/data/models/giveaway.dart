@@ -5,7 +5,8 @@
 import 'dart:convert';
 
 List<Giveaway> giveawayFromJson(String str) =>
-    List<Giveaway>.from(json.decode(str).map((x) => Giveaway.fromJson(x)));
+    List<Giveaway>.from((json.decode(str) as List)
+        .map((x) => Giveaway.fromJson(x as Map<String, dynamic>)));
 
 String giveawayToJson(List<Giveaway> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
@@ -48,22 +49,22 @@ class Giveaway {
   String openGiveaway;
 
   factory Giveaway.fromJson(Map<String, dynamic> json) => Giveaway(
-        id: json["id"],
-        title: json["title"],
-        worth: json["worth"],
-        thumbnail: json["thumbnail"],
-        image: json["image"],
-        description: json["description"],
-        instructions: json["instructions"],
-        openGiveawayUrl: json["open_giveaway_url"],
-        publishedDate: DateTime.parse(json["published_date"]),
-        type: json["type"],
-        platforms: json["platforms"],
-        endDate: json["end_date"],
-        users: json["users"],
-        status: json["status"],
-        gamerpowerUrl: json["gamerpower_url"],
-        openGiveaway: json["open_giveaway"],
+        id: json["id"] as int,
+        title: json["title"] as String,
+        worth: json["worth"] as String,
+        thumbnail: json["thumbnail"] as String,
+        image: json["image"] as String,
+        description: json["description"] as String,
+        instructions: json["instructions"] as String,
+        openGiveawayUrl: json["open_giveaway_url"] as String,
+        publishedDate: DateTime.parse(json["published_date"] as String),
+        type: json["type"] as String,
+        platforms: json["platforms"] as String,
+        endDate: json["end_date"] as String,
+        users: json["users"] as int,
+        status: json["status"] as String,
+        gamerpowerUrl: json["gamerpower_url"] as String,
+        openGiveaway: json["open_giveaway"] as String,
       );
 
   Map<String, dynamic> toJson() => {

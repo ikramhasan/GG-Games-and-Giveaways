@@ -3,6 +3,7 @@ import 'package:share_plus/share_plus.dart';
 
 import '../../../../app/utils/launch_url.dart';
 
+// ignore_for_file: constant_identifier_names
 enum EntityType { GAME, GIVEAWAY }
 
 class KButtonBar extends StatelessWidget {
@@ -27,7 +28,7 @@ class KButtonBar extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 primary: Theme.of(context).cardColor,
-                minimumSize: Size(200, 50),
+                minimumSize: const Size(200, 50),
                 side: BorderSide(
                   color: Theme.of(context).accentColor,
                 ),
@@ -46,11 +47,11 @@ class KButtonBar extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               primary: Theme.of(context).cardColor,
-              minimumSize: Size(50, 50),
+              minimumSize: const Size(50, 50),
               side: BorderSide(
                 color: Theme.of(context).accentColor,
               ),

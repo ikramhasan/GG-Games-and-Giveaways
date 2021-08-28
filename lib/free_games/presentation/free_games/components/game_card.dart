@@ -15,7 +15,7 @@ class GameCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 198,
       width: double.infinity,
       child: Row(
@@ -26,7 +26,7 @@ class GameCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
               child: Material(
-                borderRadius: BorderRadius.only(
+                borderRadius: const BorderRadius.only(
                   bottomRight: Radius.circular(16),
                   topRight: Radius.circular(16),
                 ),
@@ -37,12 +37,12 @@ class GameCard extends StatelessWidget {
                       builder: (context) => FreeGameDetailsPage(id: game.id),
                     ));
                   },
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(16),
                     topRight: Radius.circular(16),
                   ),
                   child: Container(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -55,16 +55,16 @@ class GameCard extends StatelessWidget {
                             color: Theme.of(context).accentColor,
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         Expanded(
                           child: Text(
                             game.shortDescription,
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 14),
+                            style: const TextStyle(fontSize: 14),
                           ),
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
                         buildFooter(),
                       ],
                     ),
@@ -78,13 +78,13 @@ class GameCard extends StatelessWidget {
     );
   }
 
-  buildFooter() {
+  Row buildFooter() {
     return Row(
       children: [
         Container(
           height: 20,
           decoration: BoxDecoration(
-            color: Color(0xFF4C8219),
+            color: const Color(0xFF4C8219),
             borderRadius: BorderRadius.circular(3),
           ),
           child: Padding(
@@ -95,16 +95,16 @@ class GameCard extends StatelessWidget {
             child: Center(
               child: Text(
                 game.platform == Platform.PC_WINDOWS ? 'PC' : 'PC / BROWSER',
-                style: TextStyle(fontSize: 12),
+                style: const TextStyle(fontSize: 12),
               ),
             ),
           ),
         ),
-        SizedBox(width: 8),
+        const SizedBox(width: 8),
         Container(
           height: 20,
           decoration: BoxDecoration(
-            color: Color(0xFF4C8219),
+            color: const Color(0xFF4C8219),
             borderRadius: BorderRadius.circular(3),
           ),
           child: Padding(
@@ -114,8 +114,8 @@ class GameCard extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                getGenreString(game.genre!),
-                style: TextStyle(
+                getGenreString(game.genre),
+                style: const TextStyle(
                   fontSize: 12,
                 ),
               ),

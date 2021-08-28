@@ -35,7 +35,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      stops: [0.6, 0.9],
+                      stops: const [0.6, 0.9],
                       colors: [
                         Colors.transparent,
                         Theme.of(context).canvasColor,
@@ -45,7 +45,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: Column(
@@ -59,9 +59,9 @@ class GiveawayDetailsPage extends StatelessWidget {
                       color: Theme.of(context).accentColor,
                     ),
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                   Text(giveaway.description),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     'Instructions',
                     style: TextStyle(
@@ -70,15 +70,15 @@ class GiveawayDetailsPage extends StatelessWidget {
                       color: Theme.of(context).accentColor,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(giveaway.instructions),
-                  SizedBox(height: 16),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   KButtonBar(
                     url: giveaway.openGiveawayUrl,
                     entityType: EntityType.GIVEAWAY,
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Text(
                     'About this giveaway',
                     style: TextStyle(
@@ -87,7 +87,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                       color: Theme.of(context).accentColor,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   AboutWidget(
                     prefix1: 'Status',
                     prefix2: 'Worth',
@@ -106,7 +106,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     suffix1: giveaway.platforms,
                     suffix2: giveaway.publishedDate.toString().substring(0, 10),
                   ),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                 ],
               ),
             ),

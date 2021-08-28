@@ -21,34 +21,37 @@ class FreeGamesCubit extends Cubit<FreeGamesState> {
 
     if (sort != null && sort.isNotEmpty) {
       if (url.contains('?')) {
-        url = url + '&sort-by=$sort';
+        url = '$url&sort-by=$sort';
       } else {
-        url = url + '?sort-by=$sort';
+        url = '$url?sort-by=$sort';
       }
     }
 
     if (platform != null && platform.isNotEmpty) {
       if (url.contains('?')) {
-        url = url + '&platform=$platform';
+        url = '$url&platform=$platform';
       } else {
-        url = url + '?platform=$platform';
+        url = '$url?platform=$platform';
       }
     }
     if (category != null && category.isNotEmpty) {
-      url = url + '&category=$category';
+      url = '$url&category=$category';
     }
 
     try {
       final List<FreeGame> freeGamesList =
-          await _repository.getFreeGamesList(url) as List<FreeGame>;
+          await _repository.getFreeGamesList(url);
 
       emit(FreeGamesLoaded(freeGamesList: freeGamesList));
     } catch (e) {
-      emit(FreeGamesError(
+      emit(
+        FreeGamesError(
           message:
-              'No free games available for this filter at this moment. Please try again later'));
-      final List<FreeGame> freeGamesList = await _repository
-          .getFreeGamesList('$BASE_URL/games') as List<FreeGame>;
+              'No free games available for this filter at this moment. Please try again later',
+        ),
+      );
+      final List<FreeGame> freeGamesList =
+          await _repository.getFreeGamesList('$BASE_URL/games');
 
       emit(FreeGamesLoaded(freeGamesList: freeGamesList));
     }

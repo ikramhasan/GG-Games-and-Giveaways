@@ -20,27 +20,27 @@ class AboutWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         buildColumn(prefix1, suffix1),
-        SizedBox(width: 16),
+        const SizedBox(width: 16),
         buildColumn(prefix2, suffix2),
       ],
     );
   }
 
-  buildColumn(String text1, String text2) {
+  Expanded buildColumn(String text1, String text2) {
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             '$text1:',
-            style: TextStyle(color: Colors.white),
+            style: const TextStyle(color: Colors.white),
           ),
-          SizedBox(width: 16),
+          const SizedBox(width: 16),
           Text(
             text2,
-            style: TextStyle(color: Colors.grey),
+            style: const TextStyle(color: Colors.grey),
           ),
-          SizedBox(height: 4),
+          const SizedBox(height: 4),
         ],
       ),
     );

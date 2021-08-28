@@ -18,11 +18,11 @@ class MinimumSpecSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             'Minimum System Requirements',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
           ),
-          SizedBox(height: 8),
+          const SizedBox(height: 8),
           SystemRequirementsWidget(
             text1: 'OS',
             text2: game.minimumSystemRequirements.os ?? 'N/A',

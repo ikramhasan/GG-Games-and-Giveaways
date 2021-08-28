@@ -1,6 +1,6 @@
 import '../data/models/free_game.dart';
 
-String getGenreString(Genre genre) {
+String getGenreString(Genre? genre) {
   switch (genre) {
     case Genre.ACTION_RPG:
       return 'Action RPG';
@@ -35,6 +35,6 @@ String getGenreString(Genre genre) {
     case Genre.STRATEGY:
       return 'Strategy';
     default:
-      return 'Error';
+      return 'N/A';
   }
 }

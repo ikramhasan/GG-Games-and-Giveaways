@@ -19,7 +19,7 @@ class FreeGameFilterWidget extends StatelessWidget {
       height: MediaQuery.of(context).size.height * 0.7,
       decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
-        borderRadius: BorderRadius.vertical(
+        borderRadius: const BorderRadius.vertical(
           top: Radius.circular(8),
         ),
       ),
@@ -27,29 +27,28 @@ class FreeGameFilterWidget extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: LayoutBuilder(builder: (context, constraint) {
           return SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             child: ConstrainedBox(
               constraints: BoxConstraints(minHeight: constraint.maxHeight),
               child: IntrinsicHeight(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 16),
-                    Align(
-                      child: Text(
+                    const SizedBox(height: 16),
+                    const Align(
+                      child:  Text(
                         'Filter',
                         style: TextStyle(fontSize: 20),
                       ),
-                      alignment: Alignment.center,
                     ),
-                    SizedBox(height: 8),
-                    Text(
+                    const SizedBox(height: 8),
+                    const Text(
                       'Sort by',
                       style: TextStyle(fontSize: 16),
                     ),
                     FormBuilderChoiceChip(
                       name: 'sort-by',
-                      options: [
+                      options: const [
                         FormBuilderFieldOption(
                           value: 'release-date',
                           child: Text('Release Date'),
@@ -76,14 +75,14 @@ class FreeGameFilterWidget extends StatelessWidget {
                         }
                       },
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'Platform',
                       style: TextStyle(fontSize: 16),
                     ),
                     FormBuilderChoiceChip(
                       name: 'platform',
-                      options: [
+                      options: const [
                         FormBuilderFieldOption(
                           value: 'pc',
                           child: Text('PC'),
@@ -106,14 +105,14 @@ class FreeGameFilterWidget extends StatelessWidget {
                         }
                       },
                     ),
-                    SizedBox(height: 16),
-                    Text(
+                    const SizedBox(height: 16),
+                    const Text(
                       'Genre',
                       style: TextStyle(fontSize: 16),
                     ),
                     FormBuilderDropdown(
                       name: 'category_form',
-                      hint: Text('Select a Genre'),
+                      hint: const Text('Select a Genre'),
                       items: [
                         'mmorpg',
                         'shooter',
@@ -174,20 +173,19 @@ class FreeGameFilterWidget extends StatelessWidget {
                     ),
                     const Spacer(),
                     Row(
-                      mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
                           },
-                          child: FaIcon(
+                          child: const FaIcon(
                             FontAwesomeIcons.solidTimesCircle,
                             size: 40,
                             color: Colors.red,
                           ),
                         ),
-                        SizedBox(width: 32),
+                        const SizedBox(width: 32),
                         InkWell(
                           onTap: () {
                             Navigator.pop(context);
@@ -205,7 +203,7 @@ class FreeGameFilterWidget extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),

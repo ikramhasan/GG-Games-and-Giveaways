@@ -32,12 +32,12 @@ class App extends StatelessWidget {
           cardColor: const Color(0xFF22252B),
           primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.merriweather().fontFamily,
-          appBarTheme: AppBarTheme(
-            color: const Color(0xFF22252B),
+          appBarTheme: const AppBarTheme(
+            color: Color(0xFF22252B),
             titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        home: Wrapper(),
+        home: const  Wrapper(),
       ),
     );
   }

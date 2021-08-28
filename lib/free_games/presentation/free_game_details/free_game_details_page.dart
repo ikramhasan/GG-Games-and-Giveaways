@@ -35,16 +35,16 @@ class FreeGameDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GameHeader(game: state.game),
-                  SizedBox(height: 8),
+                  const SizedBox(height: 8),
                   AboutSection(game: state.game),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   KButtonBar(
                     url: state.game.gameUrl,
                     entityType: EntityType.GAME,
                   ),
                   ScreenshotSection(game: state.game),
                   MinimumSpecSection(game: state.game),
-                  SizedBox(height: 32),
+                  const SizedBox(height: 32),
                 ],
               ),
             );

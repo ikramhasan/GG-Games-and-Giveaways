@@ -16,10 +16,10 @@ class GiveawaysPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Giveaways'),
+        title: const Text('Giveaways'),
         actions: [
           IconButton(
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.filter,
               size: 18,
             ),
@@ -33,7 +33,7 @@ class GiveawaysPage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: FaIcon(
+            icon: const FaIcon(
               FontAwesomeIcons.infoCircle,
               size: 22,
             ),
@@ -51,7 +51,7 @@ class GiveawaysPage extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: BlocConsumer<GiveawaysCubit, GiveawaysState>(
           builder: (context, state) {
             if (state is GiveawaysLoading) {
@@ -62,7 +62,7 @@ class GiveawaysPage extends StatelessWidget {
 
             if (state is GiveawaysLoaded) {
               return ListView.builder(
-                key: PageStorageKey('giveaways-list'),
+                key: const PageStorageKey('giveaways-list'),
                 itemCount: state.giveawaysList.length,
                 itemBuilder: (context, index) {
                   final giveaway = state.giveawaysList[index];
