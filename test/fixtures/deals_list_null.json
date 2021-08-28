@@ -1,0 +1,23 @@
+[
+  {
+    "internalName": "internalName",
+    "title": "title",
+    "metacriticLink": null,
+    "dealID": "dealId",
+    "storeID": "storeId",
+    "gameID": "gameId",
+    "salePrice": "salePrice",
+    "normalPrice": "normalPrice",
+    "isOnSale": "isOnSale",
+    "savings": "savings",
+    "metacriticScore": "metacriticScore",
+    "steamRatingText": null,
+    "steamRatingPercent": "steamRatingPercent",
+    "steamRatingCount": "steamRatingCount",
+    "steamAppID": null,
+    "releaseDate": 1590105600,
+    "lastChange": 1629922706,
+    "dealRating": "dealRating",
+    "thumb": "thumb"
+  }
+]
