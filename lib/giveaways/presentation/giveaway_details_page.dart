@@ -75,6 +75,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                   const SizedBox(height: 16),
                   const SizedBox(height: 16),
                   KButtonBar(
+                    title: giveaway.title,
                     url: giveaway.openGiveawayUrl,
                     entityType: EntityType.GIVEAWAY,
                   ),

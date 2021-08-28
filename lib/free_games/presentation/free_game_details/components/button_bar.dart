@@ -8,11 +8,13 @@ enum EntityType { GAME, GIVEAWAY }
 
 class KButtonBar extends StatelessWidget {
   final String url;
+  final String title;
   final EntityType entityType;
 
   const KButtonBar({
     Key? key,
     required this.url,
+    required this.title,
     required this.entityType,
   }) : super(key: key);
 
@@ -57,7 +59,8 @@ class KButtonBar extends StatelessWidget {
               ),
             ),
             onPressed: () {
-              Share.share('Check this out!: $url');
+              Share.share(
+                  '$title is now free! Get it before the time runs out!: $url. To get more free free games like this, download this app: https://play.google.com/store/apps/details?id=com.ikramhasan.free_games_giveaways');
             },
             child: Icon(
               Icons.share,

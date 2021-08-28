@@ -39,6 +39,7 @@ class FreeGameDetailsPage extends StatelessWidget {
                   AboutSection(game: state.game),
                   const SizedBox(height: 16),
                   KButtonBar(
+                    title: state.game.title,
                     url: state.game.gameUrl,
                     entityType: EntityType.GAME,
                   ),
