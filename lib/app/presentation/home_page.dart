@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+// import 'package:free_games_giveaways/game_deals/presentation/game_deal_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../free_games/presentation/free_games/free_games_page.dart';
@@ -35,6 +36,7 @@ class _HomePageState extends State<HomePage> {
               children: <Widget>[
                 const GiveawaysPage(),
                 FreeGamesPage(),
+                // const GameDealPage(),
               ],
             ),
           ),
@@ -106,6 +108,20 @@ class _HomePageState extends State<HomePage> {
               ),
               label: 'Free Games',
             ),
+            // BottomNavigationBarItem(
+            //   icon: Container(
+            //     decoration: _selectedItemPosition == 0
+            //         ? BoxDecoration(boxShadow: [
+            //             BoxShadow(
+            //                 color: Colors.grey.shade900.withOpacity(0.3),
+            //                 blurRadius: 10.0,
+            //                 spreadRadius: 4.0),
+            //           ])
+            //         : null,
+            //     child: const FaIcon(FontAwesomeIcons.coins),
+            //   ),
+            //   label: 'Best Deals',
+            // ),
           ],
           currentIndex: _selectedItemPosition,
           onTap: (index) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/game_deals/data/cubit/game_deals_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../free_games/data/cubit/free_game_detail_cubit.dart';
@@ -12,14 +13,17 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
+        BlocProvider<FreeGamesCubit>(
           create: (context) => FreeGamesCubit(),
         ),
-        BlocProvider(
+        BlocProvider<FreeGameDetailsCubit>(
           create: (context) => FreeGameDetailsCubit(),
         ),
-        BlocProvider(
+        BlocProvider<GiveawaysCubit>(
           create: (context) => GiveawaysCubit(),
+        ),
+        BlocProvider<GameDealsCubit>(
+          create: (context) => GameDealsCubit(),
         ),
       ],
       child: MaterialApp(
@@ -37,7 +41,7 @@ class App extends StatelessWidget {
             titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
-        home: const  Wrapper(),
+        home: const Wrapper(),
       ),
     );
   }
