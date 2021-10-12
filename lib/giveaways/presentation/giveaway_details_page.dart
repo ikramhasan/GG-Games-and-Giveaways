@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/app/utils/analytics.dart';
 
 import '../../free_games/presentation/free_game_details/components/about_widget.dart';
 import '../../free_games/presentation/free_game_details/components/button_bar.dart';
@@ -12,6 +13,11 @@ class GiveawayDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    logViewGame(
+      itemId: giveaway.id.toString(),
+      itemName: giveaway.title,
+      itemCategory: 'Giveaway',
+    );
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(

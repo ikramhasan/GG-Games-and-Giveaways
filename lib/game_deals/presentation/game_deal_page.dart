@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/app/presentation/about_page.dart';
-import 'package:free_games_giveaways/app/utils/show_error.dart';
-import 'package:free_games_giveaways/game_deals/data/cubit/game_deals_cubit.dart';
+import '../../app/presentation/about_page.dart';
+import '../../app/utils/show_error.dart';
+import '../data/cubit/game_deals_cubit.dart';
 
 class GameDealPage extends StatelessWidget {
   const GameDealPage({Key? key}) : super(key: key);

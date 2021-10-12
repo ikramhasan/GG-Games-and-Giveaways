@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:free_games_giveaways/game_deals/data/models/game_deals.dart';
-import 'package:free_games_giveaways/game_deals/data/repository/game_deals_repository.dart';
+import '../models/game_deals.dart';
+import '../repository/game_deals_repository.dart';
 import 'package:meta/meta.dart';
 
 part 'game_deals_state.dart';

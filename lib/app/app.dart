@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:free_games_giveaways/game_deals/data/cubit/game_deals_cubit.dart';
+import 'utils/analytics.dart';
+import '../game_deals/data/cubit/game_deals_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../free_games/data/cubit/free_game_detail_cubit.dart';
@@ -41,6 +42,7 @@ class App extends StatelessWidget {
             titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
           ),
         ),
+        navigatorObservers: <NavigatorObserver>[observer],
         home: const Wrapper(),
       ),
     );

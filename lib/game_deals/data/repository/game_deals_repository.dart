@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:free_games_giveaways/game_deals/data/models/game_deals.dart';
+import '../models/game_deals.dart';
 import 'package:http/http.dart' as http;
 
 // ignore_for_file: constant_identifier_names
