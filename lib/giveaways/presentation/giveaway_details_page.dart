@@ -99,7 +99,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     prefix1: 'Type',
                     prefix2: 'Ends at',
                     suffix1: giveaway.type,
-                    suffix2: giveaway.endDate,
+                    suffix2: giveaway.endDate.toString().substring(0, 10),
                   ),
                   AboutWidget(
                     prefix1: 'Platforms',
