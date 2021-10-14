@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/free_games/data/models/free_game.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_game_details/free_game_details_page.dart';
+import '../../../data/models/free_game.dart';
+import '../../free_game_details/free_game_details_page.dart';
 
 class ThumbnailPreview extends StatelessWidget {
   final String imageUrl;

@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:free_games_giveaways/app/utils/analytics.dart';
 import 'package:meta/meta.dart';
 
 import '../models/giveaway.dart';
@@ -44,6 +45,7 @@ class GiveawaysCubit extends Cubit<GiveawaysState> {
     }
 
     try {
+      await logFilterQuery(url);
       final List<Giveaway> giveawaysList =
           await _repository.getGiveawaysList(url);
       emit(GiveawaysLoaded(giveawaysList: giveawaysList));

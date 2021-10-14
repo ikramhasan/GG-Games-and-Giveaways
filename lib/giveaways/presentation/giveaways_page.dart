@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/app/utils/show_error.dart';
+import '../../app/utils/show_error.dart';
 
 import '../../app/presentation/about_page.dart';
 import '../data/cubit/giveaways_cubit.dart';

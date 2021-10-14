@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/app/utils/analytics.dart';
 import 'package:share_plus/share_plus.dart';
 
 import '../../../../app/utils/launch_url.dart';
@@ -37,6 +38,7 @@ class KButtonBar extends StatelessWidget {
               ),
               onPressed: () {
                 launchURL(url);
+                logActionButtonPressed(id: url, title: title);
               },
               child: Text(
                 entityType == EntityType.GAME
@@ -60,7 +62,13 @@ class KButtonBar extends StatelessWidget {
             ),
             onPressed: () {
               Share.share(
-                  '$title is now free! Get it before the time runs out!: $url. To get more free free games like this, download this app: https://play.google.com/store/apps/details?id=com.ikramhasan.free_games_giveaways');
+                '$title is now free! Get it before the time runs out!: $url. To get more free free games like this, download this app: https://play.google.com/store/apps/details?id=com.ikramhasan.free_games_giveaways',
+              );
+              logShare(
+                contentType: entityType.toString(),
+                itemId: url,
+                method: title,
+              );
             },
             child: Icon(
               Icons.share,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_game_details/screenshot_page.dart';
+import '../screenshot_page.dart';
 import 'package:getwidget/components/carousel/gf_carousel.dart';
 
 import '../../../data/models/free_game_details.dart';
