@@ -160,5 +160,6 @@ class Screenshot {
         "image": image,
       };
 
-  bool operator ==(o) => o is Screenshot && id == o.id && image == o.image;
+  @override
+  bool operator ==(Object o) => o is Screenshot && id == o.id && image == o.image;
 }

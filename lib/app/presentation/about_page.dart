@@ -17,7 +17,7 @@ class AboutPage extends StatelessWidget {
                 'GG',
                 style: TextStyle(
                   fontSize: 24,
-                  color: Theme.of(context).accentColor,
+                  color:  Theme.of(context).accentColor,
                 ),
               ),
               const SizedBox(height: 8),

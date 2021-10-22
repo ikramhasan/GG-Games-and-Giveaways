@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'utils/analytics.dart';
-import '../game_deals/data/cubit/game_deals_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../free_games/data/cubit/free_game_detail_cubit.dart';
 import '../free_games/data/cubit/free_games_cubit.dart';
+import '../game_deals/data/cubit/game_deals_cubit.dart';
 import '../giveaways/data/cubit/giveaways_cubit.dart';
+import 'utils/analytics.dart';
 import 'wrapper.dart';
 
 class App extends StatelessWidget {
@@ -33,14 +33,13 @@ class App extends StatelessWidget {
         theme: ThemeData(
           brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),
-          accentColor: const Color(0xFF52EE01),
           cardColor: const Color(0xFF22252B),
-          primarySwatch: Colors.yellow,
           fontFamily: GoogleFonts.merriweather().fontFamily,
           appBarTheme: const AppBarTheme(
             color: Color(0xFF22252B),
-            titleTextStyle: TextStyle(fontWeight: FontWeight.bold),
-          ),
+            titleTextStyle:
+                TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          ), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(secondary: const Color(0xFF52EE01)),
         ),
         navigatorObservers: <NavigatorObserver>[observer],
         home: const Wrapper(),
