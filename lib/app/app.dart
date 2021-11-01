@@ -39,7 +39,12 @@ class App extends StatelessWidget {
             color: Color(0xFF22252B),
             titleTextStyle:
                 TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(secondary: const Color(0xFF52EE01)),
+          ),
+          colorScheme:
+              ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(
+            secondary: const Color(0xFF52EE01),
+            brightness: Brightness.dark,
+          ),
         ),
         navigatorObservers: <NavigatorObserver>[observer],
         home: const Wrapper(),
