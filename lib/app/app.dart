@@ -31,7 +31,6 @@ class App extends StatelessWidget {
         title: 'GG',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),
           cardColor: const Color(0xFF22252B),
           fontFamily: GoogleFonts.merriweather().fontFamily,
@@ -39,7 +38,12 @@ class App extends StatelessWidget {
             color: Color(0xFF22252B),
             titleTextStyle:
                 TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(secondary: const Color(0xFF52EE01)),
+          ),
+          colorScheme:
+              ColorScheme.fromSwatch(primarySwatch: Colors.yellow).copyWith(
+            secondary: const Color(0xFF52EE01),
+            brightness: Brightness.dark,
+          ),
         ),
         navigatorObservers: <NavigatorObserver>[observer],
         home: const Wrapper(),
