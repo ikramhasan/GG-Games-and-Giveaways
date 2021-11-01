@@ -31,6 +31,7 @@ class App extends StatelessWidget {
         title: 'GG',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+          brightness: Brightness.dark,
           canvasColor: const Color(0xFF171717),
           cardColor: const Color(0xFF22252B),
           fontFamily: GoogleFonts.merriweather().fontFamily,
