@@ -36,7 +36,7 @@ class FreeGameFilterWidget extends StatelessWidget {
                   children: [
                     const SizedBox(height: 16),
                     const Align(
-                      child:  Text(
+                      child: Text(
                         'Filter',
                         style: TextStyle(fontSize: 20),
                       ),
@@ -198,7 +198,7 @@ class FreeGameFilterWidget extends StatelessWidget {
                           child: FaIcon(
                             FontAwesomeIcons.solidCheckCircle,
                             size: 40,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                           ),
                         ),
                       ],

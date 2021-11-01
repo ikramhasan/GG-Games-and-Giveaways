@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
           ),
-          unselectedItemColor: Theme.of(context).accentColor,
+          unselectedItemColor: Theme.of(context).colorScheme.secondary,
           selectedItemColor: Colors.white,
           showSelectedLabels: true,
           backgroundColor: Theme.of(context).cardColor,

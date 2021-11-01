@@ -33,7 +33,7 @@ class KButtonBar extends StatelessWidget {
                 primary: Theme.of(context).cardColor,
                 minimumSize: const Size(200, 50),
                 side: BorderSide(
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               onPressed: () {
@@ -46,7 +46,7 @@ class KButtonBar extends StatelessWidget {
                     : 'Go to Giveaway',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),
@@ -57,7 +57,7 @@ class KButtonBar extends StatelessWidget {
               primary: Theme.of(context).cardColor,
               minimumSize: const Size(50, 50),
               side: BorderSide(
-                color: Theme.of(context).accentColor,
+                color: Theme.of(context).colorScheme.secondary,
               ),
             ),
             onPressed: () {
@@ -72,7 +72,7 @@ class KButtonBar extends StatelessWidget {
             },
             child: Icon(
               Icons.share,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
             ),
           )
         ],

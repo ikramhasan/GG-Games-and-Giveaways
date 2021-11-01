@@ -15,7 +15,7 @@ void showError(BuildContext context, String message) {
     ),
     buttons: [
       DialogButton(
-        color: Theme.of(context).accentColor,
+        color: Theme.of(context).colorScheme.secondary,
         onPressed: () => Navigator.pop(context),
         width: 120,
         child: const Text(

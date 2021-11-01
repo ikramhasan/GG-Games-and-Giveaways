@@ -17,7 +17,7 @@ class AboutPage extends StatelessWidget {
                 'GG',
                 style: TextStyle(
                   fontSize: 24,
-                  color:  Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
               const SizedBox(height: 8),
@@ -33,9 +33,9 @@ class AboutPage extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   CupertinoIcons.mail,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
-                title: const  Text(
+                title: const Text(
                   'Report a bug!',
                 ),
                 onTap: () {
@@ -46,9 +46,9 @@ class AboutPage extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   CupertinoIcons.person_alt_circle,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
-                title: const  Text(
+                title: const Text(
                   'About me',
                 ),
                 onTap: () {
@@ -59,9 +59,9 @@ class AboutPage extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   CupertinoIcons.square_stack_3d_down_right,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
-                title:const  Text(
+                title: const Text(
                   'More apps',
                 ),
                 onTap: () {
@@ -81,7 +81,7 @@ class AboutPage extends StatelessWidget {
                     child: Text(
                       'Close',
                       style: TextStyle(
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

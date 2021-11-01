@@ -164,7 +164,7 @@ class GiveawaysFilterModal extends StatelessWidget {
                           child: FaIcon(
                             FontAwesomeIcons.solidCheckCircle,
                             size: 40,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                           ),
                         ),
                       ],

@@ -62,7 +62,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   const SizedBox(height: 32),
@@ -73,7 +73,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -91,7 +91,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -105,13 +105,13 @@ class GiveawayDetailsPage extends StatelessWidget {
                     prefix1: 'Type',
                     prefix2: 'Ends at',
                     suffix1: giveaway.type,
-                    suffix2: giveaway.endDate.toString().substring(0, 10),
+                    suffix2: giveaway.endDate,
                   ),
                   AboutWidget(
                     prefix1: 'Platforms',
                     prefix2: 'Published at',
                     suffix1: giveaway.platforms,
-                    suffix2: giveaway.publishedDate.toString().substring(0, 10),
+                    suffix2: giveaway.publishedDate.toString(),
                   ),
                   const SizedBox(height: 32),
                 ],
