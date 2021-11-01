@@ -22,6 +22,7 @@ class GiveawaysPage extends StatelessWidget {
             icon: const FaIcon(
               FontAwesomeIcons.filter,
               size: 18,
+              color: Colors.white,
             ),
             onPressed: () {
               showModalBottomSheet(
@@ -36,6 +37,7 @@ class GiveawaysPage extends StatelessWidget {
             icon: const FaIcon(
               FontAwesomeIcons.infoCircle,
               size: 22,
+              color: Colors.white,
             ),
             onPressed: () {
               showDialog(
