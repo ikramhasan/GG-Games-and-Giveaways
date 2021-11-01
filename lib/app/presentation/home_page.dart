@@ -61,6 +61,7 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: SnakeNavigationBar.color(
+          snakeViewColor: Theme.of(context).colorScheme.secondary,
           behaviour: SnakeBarBehaviour.floating,
           snakeShape: SnakeShape.rectangle,
           padding: const EdgeInsets.all(16),
@@ -71,24 +72,29 @@ class _HomePageState extends State<HomePage> {
           selectedItemColor: Colors.white,
           showSelectedLabels: true,
           backgroundColor: Theme.of(context).cardColor,
-          selectedLabelStyle:
-              GoogleFonts.merriweather(fontWeight: FontWeight.w900, shadows: [
-            const BoxShadow(
-              //color: Colors.black,
-              blurRadius: 13.0,
-              spreadRadius: 5.0,
-            ),
-          ]),
+          selectedLabelStyle: GoogleFonts.merriweather(
+            fontWeight: FontWeight.w900,
+            shadows: [
+              const BoxShadow(
+                //color: Colors.black,
+                blurRadius: 13.0,
+                spreadRadius: 5.0,
+              ),
+            ],
+          ),
           items: [
             BottomNavigationBarItem(
               icon: Container(
                 decoration: _selectedItemPosition == 1
-                    ? BoxDecoration(boxShadow: [
-                        BoxShadow(
+                    ? BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
                             color: Colors.grey.shade900.withOpacity(0.3),
                             blurRadius: 10.0,
-                            spreadRadius: 4.0),
-                      ])
+                            spreadRadius: 4.0,
+                          ),
+                        ],
+                      )
                     : null,
                 child: const FaIcon(FontAwesomeIcons.gift),
               ),
@@ -97,12 +103,15 @@ class _HomePageState extends State<HomePage> {
             BottomNavigationBarItem(
               icon: Container(
                 decoration: _selectedItemPosition == 0
-                    ? BoxDecoration(boxShadow: [
-                        BoxShadow(
+                    ? BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
                             color: Colors.grey.shade900.withOpacity(0.3),
                             blurRadius: 10.0,
-                            spreadRadius: 4.0),
-                      ])
+                            spreadRadius: 4.0,
+                          ),
+                        ],
+                      )
                     : null,
                 child: const FaIcon(FontAwesomeIcons.gamepad),
               ),
@@ -130,7 +139,7 @@ class _HomePageState extends State<HomePage> {
             );
             _pageController.animateToPage(
               index,
-              duration: const Duration(milliseconds: 200),
+              duration: const Duration(milliseconds: 300),
               curve: Curves.linear,
             );
           }),
