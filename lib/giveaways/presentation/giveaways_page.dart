@@ -2,9 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../app/utils/show_error.dart';
-
 import '../../app/presentation/about_page.dart';
+import '../../app/utils/show_error.dart';
 import '../data/cubit/giveaways_cubit.dart';
 import 'components/giveaway_card.dart';
 import 'components/giveaways_filter_modal.dart';

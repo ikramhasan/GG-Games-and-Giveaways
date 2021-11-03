@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>133527568191-sg69e78egvhnfu9nvc3q1ul4ksh5o636.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.133527568191-sg69e78egvhnfu9nvc3q1ul4ksh5o636</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>133527568191-2da0soc2biil0arfrklas3stdc9ken4p.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB_c9s5gvQdZNKrkerLPxxu0ByduOX6Y2c</string>
+	<key>GCM_SENDER_ID</key>
+	<string>133527568191</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ikramhasan.freeGamesGiveaways</string>
+	<key>PROJECT_ID</key>
+	<string>games-and-giveaways</string>
+	<key>STORAGE_BUCKET</key>
+	<string>games-and-giveaways.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:133527568191:ios:23861beeb699e8f4985d8a</string>
+</dict>
+</plist>

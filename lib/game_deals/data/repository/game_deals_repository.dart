@@ -1,8 +1,8 @@
-import 'dart:convert';
 import 'dart:io';
 
-import '../models/game_deals.dart';
 import 'package:http/http.dart' as http;
+
+import '../models/game_deals.dart';
 
 // ignore_for_file: constant_identifier_names
 const BASE_URL = 'https://www.cheapshark.com/api/1.0/deals';

@@ -1,3 +1,5 @@
+// ignore_for_file: type_annotate_public_apis, hash_and_equals
+
 class FreeGame {
   FreeGame({
     required this.id,
@@ -70,7 +72,6 @@ class FreeGame {
     return 'FreeGame(id: $id, title: $title, genre: $genre, publisher: $publisher)';
   }
 }
-
 
 // ignore_for_file: constant_identifier_names
 enum Genre {
