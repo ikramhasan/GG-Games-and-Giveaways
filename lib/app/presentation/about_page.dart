@@ -66,7 +66,8 @@ class AboutPage extends StatelessWidget {
                 ),
                 onTap: () {
                   launchURL(
-                      'https://play.google.com/store/search?q=pub%3AIkram%20Hasan&c=apps');
+                    'https://play.google.com/store/search?q=pub%3AIkram%20Hasan&c=apps',
+                  );
                 },
               ),
               const Divider(color: Colors.grey),

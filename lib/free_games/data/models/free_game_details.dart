@@ -1,3 +1,5 @@
+// ignore_for_file: hash_and_equals, type_annotate_public_apis
+
 import 'dart:convert';
 
 FreeGameDetails gameEntityFromJson(String str) =>
@@ -56,9 +58,12 @@ class FreeGameDetails {
         releaseDate: DateTime.parse(json["release_date"] as String),
         freetogameProfileUrl: json["freetogame_profile_url"] as String,
         minimumSystemRequirements: MinimumSystemRequirements.fromJson(
-            json["minimum_system_requirements"] as Map<String, dynamic>),
-        screenshots: List<Screenshot>.from((json["screenshots"] as List)
-            .map((x) => Screenshot.fromJson(x as Map<String, dynamic>))),
+          json["minimum_system_requirements"] as Map<String, dynamic>,
+        ),
+        screenshots: List<Screenshot>.from(
+          (json["screenshots"] as List)
+              .map((x) => Screenshot.fromJson(x as Map<String, dynamic>)),
+        ),
       );
 
   Map<String, dynamic> toJson() => {
@@ -96,7 +101,6 @@ class FreeGameDetails {
   String toString() {
     return 'FreeGameDetails(id: $id, title: $title, genre: $genre, minimul_requirements: $minimumSystemRequirements)';
   }
-
 }
 
 class MinimumSystemRequirements {
@@ -161,5 +165,6 @@ class Screenshot {
       };
 
   @override
-  bool operator ==(Object o) => o is Screenshot && id == o.id && image == o.image;
+  bool operator ==(Object o) =>
+      o is Screenshot && id == o.id && image == o.image;
 }

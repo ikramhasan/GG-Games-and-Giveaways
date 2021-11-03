@@ -2,11 +2,14 @@
 //
 //     final gameDeal = gameDealFromJson(jsonString);
 
+// ignore_for_file: type_annotate_public_apis, hash_and_equals
+
 import 'dart:convert';
 
-List<GameDeal> gameDealFromJson(String str) =>
-    List<GameDeal>.from((json.decode(str) as List)
-        .map((x) => GameDeal.fromJson(x as Map<String, dynamic>)));
+List<GameDeal> gameDealFromJson(String str) => List<GameDeal>.from(
+      (json.decode(str) as List)
+          .map((x) => GameDeal.fromJson(x as Map<String, dynamic>)),
+    );
 
 String gameDealToJson(List<GameDeal> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));

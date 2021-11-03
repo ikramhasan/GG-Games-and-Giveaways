@@ -1,7 +1,10 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:bloc/bloc.dart';
+import 'package:meta/meta.dart';
+
 import '../models/game_deals.dart';
 import '../repository/game_deals_repository.dart';
-import 'package:meta/meta.dart';
 
 part 'game_deals_state.dart';
 
