@@ -49,11 +49,9 @@ class ThumbnailPreview extends StatelessWidget {
             child: InkWell(
               borderRadius: BorderRadius.circular(16),
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) => FreeGameDetailsPage(id: game.id),
-                  ),
-                );
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => FreeGameDetailsPage(id: game.id),
+                ));
               },
             ),
           ),

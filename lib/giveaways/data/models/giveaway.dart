@@ -4,10 +4,9 @@
 
 import 'dart:convert';
 
-List<Giveaway> giveawayFromJson(String str) => List<Giveaway>.from(
-      (json.decode(str) as List)
-          .map((x) => Giveaway.fromJson(x as Map<String, dynamic>)),
-    );
+List<Giveaway> giveawayFromJson(String str) =>
+    List<Giveaway>.from((json.decode(str) as List)
+        .map((x) => Giveaway.fromJson(x as Map<String, dynamic>)));
 
 String giveawayToJson(List<Giveaway> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));

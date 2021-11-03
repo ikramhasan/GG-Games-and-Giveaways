@@ -33,11 +33,9 @@ class GameCard extends StatelessWidget {
                 color: Theme.of(context).cardColor,
                 child: InkWell(
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => FreeGameDetailsPage(id: game.id),
-                      ),
-                    );
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => FreeGameDetailsPage(id: game.id),
+                    ));
                   },
                   borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(16),

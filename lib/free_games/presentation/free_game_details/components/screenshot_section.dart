@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:free_games_giveaways/free_games/data/models/free_game_details.dart';
-import 'package:free_games_giveaways/free_games/presentation/free_game_details/screenshot_page.dart';
-import 'package:getwidget/getwidget.dart';
+import '../screenshot_page.dart';
+import 'package:getwidget/components/carousel/gf_carousel.dart';
+
+import '../../../data/models/free_game_details.dart';
 
 class ScreenshotSection extends StatelessWidget {
   final FreeGameDetails game;
@@ -34,13 +35,11 @@ class ScreenshotSection extends StatelessWidget {
               (screenshot) {
                 return InkWell(
                   onTap: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => ScreenshotPage(
-                          imageUrl: screenshot.image,
-                        ),
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ScreenshotPage(
+                        imageUrl: screenshot.image,
                       ),
-                    );
+                    ));
                   },
                   child: Container(
                     margin: const EdgeInsets.all(8.0),

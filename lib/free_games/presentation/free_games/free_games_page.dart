@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:free_games_giveaways/app/presentation/about_page.dart';
-import 'package:getwidget/components/loader/gf_loader.dart';
 import '../../../app/utils/show_error.dart';
-// import 'package:getwidget/components/loader/gf_loader.dart';
-// import 'package:getwidget/getwidget.dart';
+import 'package:getwidget/components/loader/gf_loader.dart';
+import 'package:getwidget/getwidget.dart';
 
-// import '../../../app/presentation/about_page.dart';
+import '../../../app/presentation/about_page.dart';
 import '../../data/cubit/free_games_cubit.dart';
 import 'components/free_game_filter_widget.dart';
 import 'components/game_card.dart';
