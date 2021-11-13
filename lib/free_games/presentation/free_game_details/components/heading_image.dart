@@ -17,7 +17,7 @@ class HeadingImage extends StatelessWidget {
             imageUrl,
             height: 225,
             width: double.infinity,
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
           ),
         ),
         Container(

@@ -18,11 +18,15 @@ class ScreenshotSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 16.0),
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0),
             child: Text(
               'Screenshots',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
             ),
           ),
           const SizedBox(height: 8),

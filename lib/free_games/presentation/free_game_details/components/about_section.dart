@@ -16,7 +16,11 @@ class AboutSection extends StatelessWidget {
         children: [
           Text(
             'About ${game.title}',
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
           ),
           const SizedBox(height: 8),
           AboutWidget(

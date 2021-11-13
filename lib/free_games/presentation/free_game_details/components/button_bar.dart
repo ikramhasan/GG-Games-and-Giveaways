@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -70,8 +71,10 @@ class KButtonBar extends StatelessWidget {
                 method: title,
               );
             },
-            child: Icon(
-              Icons.share,
+            child: SvgPicture.asset(
+              'assets/icons/share-social-outline.svg',
+              height: 22,
+              width: 22,
               color: Theme.of(context).colorScheme.secondary,
             ),
           )

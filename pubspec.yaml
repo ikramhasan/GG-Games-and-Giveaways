@@ -21,6 +21,7 @@ dependencies:
   flutter_form_builder: ^6.0.1
   flutter_local_notifications: ^8.1.1+1
   flutter_snake_navigationbar: ^0.5.0
+  flutter_svg: ^0.23.0+1
   font_awesome_flutter: ^9.1.0
   freezed_annotation: ^0.15.0
   getwidget: ^2.0.1-nullsafety.4
@@ -53,3 +54,4 @@ flutter:
   assets:
     - assets/licenses/
     - assets/animations/
+    - assets/icons/

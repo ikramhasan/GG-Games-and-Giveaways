@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_snake_navigationbar/flutter_snake_navigationbar.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // import 'package:free_games_giveaways/game_deals/presentation/game_deal_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,9 +14,22 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   int _selectedItemPosition = 0;
-  final _pageController = PageController();
+  late PageController _pageController;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   void _onPageChanged(int index) {
     setState(
@@ -61,88 +76,73 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       bottomNavigationBar: SnakeNavigationBar.color(
-          snakeViewColor: Theme.of(context).colorScheme.secondary,
-          behaviour: SnakeBarBehaviour.floating,
-          snakeShape: SnakeShape.rectangle,
-          padding: const EdgeInsets.all(16),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-          unselectedItemColor: Theme.of(context).colorScheme.secondary,
-          selectedItemColor: Colors.white,
-          showSelectedLabels: true,
-          backgroundColor: Theme.of(context).cardColor,
-          selectedLabelStyle: GoogleFonts.merriweather(
-            fontWeight: FontWeight.w900,
-            shadows: [
-              const BoxShadow(
-                //color: Colors.black,
-                blurRadius: 13.0,
-                spreadRadius: 5.0,
-              ),
-            ],
-          ),
-          items: [
-            BottomNavigationBarItem(
-              icon: Container(
-                decoration: _selectedItemPosition == 1
-                    ? BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade900.withOpacity(0.3),
-                            blurRadius: 10.0,
-                            spreadRadius: 4.0,
-                          ),
-                        ],
-                      )
-                    : null,
-                child: const FaIcon(FontAwesomeIcons.gift),
-              ),
-              label: 'Giveaways',
+        snakeViewColor: Theme.of(context).colorScheme.secondary,
+        behaviour: SnakeBarBehaviour.floating,
+        snakeShape: SnakeShape.rectangle,
+        padding: const EdgeInsets.all(16),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8),
+        ),
+        unselectedItemColor: Theme.of(context).colorScheme.secondary,
+        selectedItemColor: Colors.white,
+        showSelectedLabels: true,
+        backgroundColor: Theme.of(context).cardColor,
+        selectedLabelStyle: GoogleFonts.merriweather(
+          fontWeight: FontWeight.w900,
+          shadows: [
+            const BoxShadow(
+              //color: Colors.black,
+              blurRadius: 13.0,
+              spreadRadius: 5.0,
             ),
-            BottomNavigationBarItem(
-              icon: Container(
-                decoration: _selectedItemPosition == 0
-                    ? BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey.shade900.withOpacity(0.3),
-                            blurRadius: 10.0,
-                            spreadRadius: 4.0,
-                          ),
-                        ],
-                      )
-                    : null,
-                child: const FaIcon(FontAwesomeIcons.gamepad),
-              ),
-              label: 'Free Games',
-            ),
-            // BottomNavigationBarItem(
-            //   icon: Container(
-            //     decoration: _selectedItemPosition == 0
-            //         ? BoxDecoration(boxShadow: [
-            //             BoxShadow(
-            //                 color: Colors.grey.shade900.withOpacity(0.3),
-            //                 blurRadius: 10.0,
-            //                 spreadRadius: 4.0),
-            //           ])
-            //         : null,
-            //     child: const FaIcon(FontAwesomeIcons.coins),
-            //   ),
-            //   label: 'Best Deals',
-            // ),
           ],
-          currentIndex: _selectedItemPosition,
-          onTap: (index) {
-            setState(
-              () => _selectedItemPosition = index,
-            );
-            _pageController.animateToPage(
-              index,
-              duration: const Duration(milliseconds: 300),
-              curve: Curves.linear,
-            );
-          },),
+        ),
+        items: [
+          BottomNavigationBarItem(
+            icon: Bounce(
+              child: SvgPicture.asset(
+                'assets/icons/gift-outline.svg',
+                height: 24,
+                width: 24,
+                color: _selectedItemPosition == 0 ? Colors.black : Colors.white,
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/icons/game-controller-outline.svg',
+              height: 24,
+              width: 24,
+              color: _selectedItemPosition == 1 ? Colors.black : Colors.white,
+            ),
+          ),
+          // BottomNavigationBarItem(
+          //   icon: Container(
+          //     decoration: _selectedItemPosition == 0
+          //         ? BoxDecoration(boxShadow: [
+          //             BoxShadow(
+          //                 color: Colors.grey.shade900.withOpacity(0.3),
+          //                 blurRadius: 10.0,
+          //                 spreadRadius: 4.0),
+          //           ])
+          //         : null,
+          //     child: const FaIcon(FontAwesomeIcons.coins),
+          //   ),
+          //   label: 'Best Deals',
+          // ),
+        ],
+        currentIndex: _selectedItemPosition,
+        onTap: (index) {
+          setState(
+            () => _selectedItemPosition = index,
+          );
+          _pageController.animateToPage(
+            index,
+            duration: const Duration(milliseconds: 300),
+            curve: Curves.linear,
+          );
+        },
+      ),
     );
   }
 }

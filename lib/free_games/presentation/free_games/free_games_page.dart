@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/app/presentation/components/gg_progress_indicator.dart';
 
@@ -18,9 +19,10 @@ class FreeGamesPage extends StatelessWidget {
         title: const Text('Free Games'),
         actions: [
           IconButton(
-            icon: const FaIcon(
-              FontAwesomeIcons.filter,
-              size: 18,
+            icon: SvgPicture.asset(
+              'assets/icons/funnel-outline.svg',
+              height: 20,
+              width: 20,
               color: Colors.white,
             ),
             onPressed: () {
@@ -32,9 +34,10 @@ class FreeGamesPage extends StatelessWidget {
             },
           ),
           IconButton(
-            icon: const FaIcon(
-              FontAwesomeIcons.infoCircle,
-              size: 22,
+            icon: SvgPicture.asset(
+              'assets/icons/information-circle-outline.svg',
+              height: 24,
+              width: 24,
               color: Colors.white,
             ),
             onPressed: () {
