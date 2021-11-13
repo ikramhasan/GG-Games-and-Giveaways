@@ -37,6 +37,15 @@ class _HomePageState extends State<HomePage>
     );
   }
 
+  SvgPicture getIcon(String url, int index) {
+    return SvgPicture.asset(
+      url,
+      height: 24,
+      width: 24,
+      color: _selectedItemPosition == index ? Colors.black : Colors.white,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -99,22 +108,21 @@ class _HomePageState extends State<HomePage>
         ),
         items: [
           BottomNavigationBarItem(
-            icon: Bounce(
-              child: SvgPicture.asset(
-                'assets/icons/gift-outline.svg',
-                height: 24,
-                width: 24,
-                color: _selectedItemPosition == 0 ? Colors.black : Colors.white,
-              ),
-            ),
+            icon: _selectedItemPosition == 0
+                ? Pulse(
+                    duration: const Duration(milliseconds: 400),
+                    child: getIcon('assets/icons/gift-outline.svg', 0),
+                  )
+                : getIcon('assets/icons/gift-outline.svg', 0),
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/icons/game-controller-outline.svg',
-              height: 24,
-              width: 24,
-              color: _selectedItemPosition == 1 ? Colors.black : Colors.white,
-            ),
+            icon: _selectedItemPosition == 1
+                ? Pulse(
+                    duration: const Duration(milliseconds: 400),
+                    child:
+                        getIcon('assets/icons/game-controller-outline.svg', 1),
+                  )
+                : getIcon('assets/icons/game-controller-outline.svg', 1),
           ),
           // BottomNavigationBarItem(
           //   icon: Container(
