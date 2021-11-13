@@ -1,11 +1,12 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../app/utils/show_error.dart';
 import 'package:getwidget/components/loader/gf_loader.dart';
 import 'package:getwidget/getwidget.dart';
 
 import '../../../app/presentation/about_page.dart';
+import '../../../app/utils/show_error.dart';
 import '../../data/cubit/free_games_cubit.dart';
 import 'components/free_game_filter_widget.dart';
 import 'components/game_card.dart';
@@ -66,9 +67,12 @@ class FreeGamesPage extends StatelessWidget {
                 padding: const EdgeInsets.only(top: 16),
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: GameCard(game: game),
+                  return FadeInUp(
+                    delay: Duration(milliseconds: index * 100),
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 16),
+                      child: GameCard(game: game),
+                    ),
                   );
                 },
               );

@@ -4,8 +4,8 @@ include: package:lint/analysis_options.yaml
 #     argument_type_not_assignable: warning
 #     constant_identifier_names: ignore
 analyzer:
-  # exclude:
-  #   - "**/*.g.dart"
-  #   - "**/*.freezed.dart"
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
   errors:
     invalid_annotation_target: ignore # as suggested here: https://github.com/rrousselGit/freezed/issues/488

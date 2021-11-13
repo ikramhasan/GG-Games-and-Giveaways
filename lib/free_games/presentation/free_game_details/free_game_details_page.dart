@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/heading_image.dart';
 import '../../../app/utils/show_error.dart';
 import '../../data/cubit/free_game_detail_cubit.dart';
 import 'components/about_section.dart';
@@ -34,18 +36,29 @@ class FreeGameDetailsPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  GameHeader(game: state.game),
-                  const SizedBox(height: 8),
-                  AboutSection(game: state.game),
-                  const SizedBox(height: 16),
-                  KButtonBar(
-                    title: state.game.title,
-                    url: state.game.gameUrl,
-                    entityType: EntityType.GAME,
+                  FadeInDown(
+                    child: HeadingImage(imageUrl: state.game.thumbnail),
                   ),
-                  ScreenshotSection(game: state.game),
-                  MinimumSpecSection(game: state.game),
-                  const SizedBox(height: 32),
+                  FadeInUp(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const SizedBox(height: 16),
+                        GameHeader(game: state.game),
+                        const SizedBox(height: 8),
+                        AboutSection(game: state.game),
+                        const SizedBox(height: 16),
+                        KButtonBar(
+                          title: state.game.title,
+                          url: state.game.gameUrl,
+                          entityType: EntityType.GAME,
+                        ),
+                        ScreenshotSection(game: state.game),
+                        MinimumSpecSection(game: state.game),
+                        const SizedBox(height: 32),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             );

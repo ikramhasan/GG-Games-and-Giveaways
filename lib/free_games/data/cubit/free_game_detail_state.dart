@@ -1,6 +1,5 @@
 part of 'free_game_detail_cubit.dart';
 
-@immutable
 abstract class FreeGameDetailsState {}
 
 class FreeGameDetailsInitial extends FreeGameDetailsState {}

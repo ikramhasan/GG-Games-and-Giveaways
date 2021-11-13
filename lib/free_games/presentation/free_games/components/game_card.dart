@@ -35,7 +35,7 @@ class GameCard extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => FreeGameDetailsPage(id: game.id),
-                    ));
+                    ),);
                   },
                   borderRadius: const BorderRadius.only(
                     bottomRight: Radius.circular(16),

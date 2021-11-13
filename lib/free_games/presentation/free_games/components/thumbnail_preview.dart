@@ -51,7 +51,7 @@ class ThumbnailPreview extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => FreeGameDetailsPage(id: game.id),
-                ));
+                ),);
               },
             ),
           ),

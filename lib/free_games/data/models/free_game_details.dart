@@ -56,9 +56,9 @@ class FreeGameDetails {
         releaseDate: DateTime.parse(json["release_date"] as String),
         freetogameProfileUrl: json["freetogame_profile_url"] as String,
         minimumSystemRequirements: MinimumSystemRequirements.fromJson(
-            json["minimum_system_requirements"] as Map<String, dynamic>),
+            json["minimum_system_requirements"] as Map<String, dynamic>,),
         screenshots: List<Screenshot>.from((json["screenshots"] as List)
-            .map((x) => Screenshot.fromJson(x as Map<String, dynamic>))),
+            .map((x) => Screenshot.fromJson(x as Map<String, dynamic>),),),
       );
 
   Map<String, dynamic> toJson() => {

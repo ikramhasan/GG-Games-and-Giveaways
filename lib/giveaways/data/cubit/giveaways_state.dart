@@ -1,6 +1,5 @@
 part of 'giveaways_cubit.dart';
 
-@immutable
 abstract class GiveawaysState {}
 
 class GiveawaysInitial extends GiveawaysState {}

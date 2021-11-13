@@ -1,7 +1,6 @@
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../models/free_game_details.dart';
 import '../repository/free_game_details_repository.dart';

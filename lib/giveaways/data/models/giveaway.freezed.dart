@@ -11,7 +11,7 @@ part of 'giveaway.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods',);
 
 Giveaway _$GiveawayFromJson(Map<String, dynamic> json) {
   return _Giveaway.fromJson(json);
@@ -37,7 +37,7 @@ class _$GiveawayTearOff {
       int? users,
       String? status,
       @JsonKey(name: 'gamerpower_url') String? gamerpowerUrl,
-      @JsonKey(name: 'open_giveaway') String? openGiveaway}) {
+      @JsonKey(name: 'open_giveaway') String? openGiveaway,}) {
     return _Giveaway(
       id: id,
       title: title,
@@ -116,7 +116,7 @@ abstract class $GiveawayCopyWith<$Res> {
       int? users,
       String? status,
       @JsonKey(name: 'gamerpower_url') String? gamerpowerUrl,
-      @JsonKey(name: 'open_giveaway') String? openGiveaway});
+      @JsonKey(name: 'open_giveaway') String? openGiveaway,});
 }
 
 /// @nodoc
@@ -211,7 +211,7 @@ class _$GiveawayCopyWithImpl<$Res> implements $GiveawayCopyWith<$Res> {
           ? _value.openGiveaway
           : openGiveaway // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ),);
   }
 }
 
@@ -236,7 +236,7 @@ abstract class _$GiveawayCopyWith<$Res> implements $GiveawayCopyWith<$Res> {
       int? users,
       String? status,
       @JsonKey(name: 'gamerpower_url') String? gamerpowerUrl,
-      @JsonKey(name: 'open_giveaway') String? openGiveaway});
+      @JsonKey(name: 'open_giveaway') String? openGiveaway,});
 }
 
 /// @nodoc
@@ -332,7 +332,7 @@ class __$GiveawayCopyWithImpl<$Res> extends _$GiveawayCopyWithImpl<$Res>
           ? _value.openGiveaway
           : openGiveaway // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ),);
   }
 }
 
@@ -355,7 +355,7 @@ class _$_Giveaway implements _Giveaway {
       this.users,
       this.status,
       @JsonKey(name: 'gamerpower_url') this.gamerpowerUrl,
-      @JsonKey(name: 'open_giveaway') this.openGiveaway});
+      @JsonKey(name: 'open_giveaway') this.openGiveaway,});
 
   factory _$_Giveaway.fromJson(Map<String, dynamic> json) =>
       _$$_GiveawayFromJson(json);

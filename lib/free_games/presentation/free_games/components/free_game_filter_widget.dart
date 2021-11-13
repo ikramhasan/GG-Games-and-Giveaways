@@ -209,7 +209,7 @@ class FreeGameFilterWidget extends StatelessWidget {
               ),
             ),
           );
-        }),
+        },),
       ),
     );
   }

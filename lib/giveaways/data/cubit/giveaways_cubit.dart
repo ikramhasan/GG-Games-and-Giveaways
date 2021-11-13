@@ -1,6 +1,5 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
-import 'package:meta/meta.dart';
 
 import '../models/giveaway.dart';
 import '../repositories/giveaways_repository.dart';

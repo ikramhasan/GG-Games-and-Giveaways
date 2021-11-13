@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../screenshot_page.dart';
 import 'package:getwidget/components/carousel/gf_carousel.dart';
-
 import '../../../data/models/free_game_details.dart';
+import '../screenshot_page.dart';
+
 
 class ScreenshotSection extends StatelessWidget {
   final FreeGameDetails game;
@@ -39,7 +39,7 @@ class ScreenshotSection extends StatelessWidget {
                       builder: (context) => ScreenshotPage(
                         imageUrl: screenshot.image,
                       ),
-                    ));
+                    ),);
                   },
                   child: Container(
                     margin: const EdgeInsets.all(8.0),

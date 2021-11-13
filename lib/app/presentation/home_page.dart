@@ -142,7 +142,7 @@ class _HomePageState extends State<HomePage> {
               duration: const Duration(milliseconds: 300),
               curve: Curves.linear,
             );
-          }),
+          },),
     );
   }
 }

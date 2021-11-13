@@ -16,35 +16,6 @@ class GameHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Stack(
-          children: [
-            Hero(
-              tag: game.thumbnail,
-              child: Image.network(
-                game.thumbnail,
-                height: 225,
-                width: double.infinity,
-                fit: BoxFit.contain,
-              ),
-            ),
-            Container(
-              height: 225,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: const [0.8, 1],
-                  colors: [
-                    Colors.transparent,
-                    Theme.of(context).canvasColor,
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(

@@ -6,7 +6,7 @@ import 'dart:convert';
 
 List<GameDeal> gameDealFromJson(String str) =>
     List<GameDeal>.from((json.decode(str) as List)
-        .map((x) => GameDeal.fromJson(x as Map<String, dynamic>)));
+        .map((x) => GameDeal.fromJson(x as Map<String, dynamic>),),);
 
 String gameDealToJson(List<GameDeal> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));

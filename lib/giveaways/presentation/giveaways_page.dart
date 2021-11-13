@@ -1,10 +1,11 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../app/utils/show_error.dart';
 
 import '../../app/presentation/about_page.dart';
+import '../../app/utils/show_error.dart';
 import '../data/cubit/giveaways_cubit.dart';
 import 'components/giveaway_card.dart';
 import 'components/giveaways_filter_modal.dart';
@@ -68,9 +69,12 @@ class GiveawaysPage extends StatelessWidget {
                 itemCount: state.giveawaysList.length,
                 itemBuilder: (context, index) {
                   final giveaway = state.giveawaysList[index];
-                  return Padding(
-                    padding: const EdgeInsets.only(bottom: 8, top: 8),
-                    child: GiveawayCard(giveaway: giveaway),
+                  return FadeInUp(
+                    delay: Duration(milliseconds: index * 100),
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 8, top: 8),
+                      child: GiveawayCard(giveaway: giveaway),
+                    ),
                   );
                 },
               );
