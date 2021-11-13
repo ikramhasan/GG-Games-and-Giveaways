@@ -36,7 +36,7 @@ class FreeGameDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   FadeInDown(
-                    child: HeadingImage(imageUrl: state.game.thumbnail),
+                    child: HeadingImage(imageUrl: state.game.thumbnail!),
                   ),
                   FadeInUp(
                     child: Column(
@@ -48,8 +48,8 @@ class FreeGameDetailsPage extends StatelessWidget {
                         AboutSection(game: state.game),
                         const SizedBox(height: 16),
                         KButtonBar(
-                          title: state.game.title,
-                          url: state.game.gameUrl,
+                          title: state.game.title!,
+                          url: state.game.gameUrl!,
                           entityType: EntityType.GAME,
                         ),
                         ScreenshotSection(game: state.game),

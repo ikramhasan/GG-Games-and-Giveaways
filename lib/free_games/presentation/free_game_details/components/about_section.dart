@@ -22,20 +22,22 @@ class AboutSection extends StatelessWidget {
           AboutWidget(
             prefix1: 'Game',
             prefix2: 'Genre',
-            suffix1: game.title,
-            suffix2: game.genre,
+            suffix1: game.title!,
+            suffix2: game.genre!,
           ),
           AboutWidget(
             prefix1: 'Platform',
             prefix2: 'Publisher',
-            suffix1: game.platform,
-            suffix2: game.publisher,
+            suffix1: game.platform!,
+            suffix2: game.publisher!,
           ),
           AboutWidget(
             prefix1: 'Developer',
             prefix2: 'Release Date',
-            suffix1: game.developer,
-            suffix2: game.releaseDate.toString().substring(0, 10),
+            suffix1: game.developer!,
+            suffix2: game.releaseDate == null
+                ? 'N/A'
+                : game.releaseDate.toString().substring(0, 10),
           ),
         ],
       ),

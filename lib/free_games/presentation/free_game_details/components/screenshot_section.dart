@@ -3,7 +3,6 @@ import 'package:getwidget/components/carousel/gf_carousel.dart';
 import '../../../data/models/free_game_details.dart';
 import '../screenshot_page.dart';
 
-
 class ScreenshotSection extends StatelessWidget {
   final FreeGameDetails game;
 
@@ -27,36 +26,41 @@ class ScreenshotSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          GFCarousel(
-            autoPlay: true,
-            enlargeMainPage: true,
-            pagerSize: double.infinity,
-            items: game.screenshots.map(
-              (screenshot) {
-                return InkWell(
-                  onTap: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => ScreenshotPage(
-                        imageUrl: screenshot.image,
-                      ),
-                    ),);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.all(8.0),
-                    child: ClipRRect(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(5.0)),
-                      child: Image.network(
-                        screenshot.image,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
+          if (game.screenshots!.isEmpty)
+            Container()
+          else
+            GFCarousel(
+              autoPlay: true,
+              enlargeMainPage: true,
+              pagerSize: double.infinity,
+              items: game.screenshots!.map(
+                (screenshot) {
+                  return InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => ScreenshotPage(
+                            imageUrl: screenshot.image!,
+                          ),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.all(8.0),
+                      child: ClipRRect(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(5.0)),
+                        child: Image.network(
+                          screenshot.image!,
+                          fit: BoxFit.cover,
+                          width: double.infinity,
+                        ),
                       ),
                     ),
-                  ),
-                );
-              },
-            ).toList(),
-          ),
+                  );
+                },
+              ).toList(),
+            ),
         ],
       ),
     );

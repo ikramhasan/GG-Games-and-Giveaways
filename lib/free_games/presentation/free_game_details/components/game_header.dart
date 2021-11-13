@@ -22,7 +22,7 @@ class GameHeader extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                game.title,
+                game.title!,
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -37,7 +37,7 @@ class GameHeader extends StatelessWidget {
                   ),
                 ),
                 onPressed: () {
-                  launchURL(game.gameUrl);
+                  launchURL(game.gameUrl!);
                 },
                 child: Text(
                   'Get the Game',
