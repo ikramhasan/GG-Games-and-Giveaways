@@ -2,8 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:getwidget/components/loader/gf_loader.dart';
-import 'package:getwidget/getwidget.dart';
+import 'package:free_games_giveaways/app/presentation/components/gg_progress_indicator.dart';
 
 import '../../../app/presentation/about_page.dart';
 import '../../../app/utils/show_error.dart';
@@ -77,9 +76,7 @@ class FreeGamesPage extends StatelessWidget {
                 },
               );
             }
-            return const Center(
-              child: GFLoader(),
-            );
+            return const GGProgressIndicator();
           },
         ),
       ),

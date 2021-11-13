@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:free_games_giveaways/app/presentation/components/gg_progress_indicator.dart';
 import '../../app/presentation/about_page.dart';
 import '../../app/utils/show_error.dart';
 import '../data/cubit/game_deals_cubit.dart';
@@ -84,9 +85,7 @@ class GameDealPage extends StatelessWidget {
             }
 
             if (state is GameDealsLoading) {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
+              return const GGProgressIndicator();
             }
             return Container();
           },

@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/presentation/components/gg_progress_indicator.dart';
 import 'package:free_games_giveaways/free_games/presentation/free_game_details/components/heading_image.dart';
 import '../../../app/utils/show_error.dart';
 import '../../data/cubit/free_game_detail_cubit.dart';
@@ -27,9 +28,7 @@ class FreeGameDetailsPage extends StatelessWidget {
         },
         builder: (context, state) {
           if (state is FreeGameDetailsLoading) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return const GGProgressIndicator();
           }
           if (state is FreeGameDetailsLoaded) {
             return SingleChildScrollView(

@@ -7,5 +7,6 @@ analyzer:
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
+    - "lib/generated_plugin_registrant.dart"
   errors:
     invalid_annotation_target: ignore # as suggested here: https://github.com/rrousselGit/freezed/issues/488
