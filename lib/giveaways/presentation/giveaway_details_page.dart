@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/app/presentation/components/gg_back_button.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
 
 import '../../free_games/presentation/free_game_details/components/about_widget.dart';
@@ -51,6 +52,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     ),
                   ),
                 ),
+                const GGBackButton(),
               ],
             ),
             const SizedBox(height: 16),

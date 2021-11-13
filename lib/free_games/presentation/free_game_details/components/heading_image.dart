@@ -1,4 +1,6 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:free_games_giveaways/app/presentation/components/gg_back_button.dart';
 
 class HeadingImage extends StatelessWidget {
   const HeadingImage({Key? key, required this.imageUrl}) : super(key: key);
@@ -10,7 +12,7 @@ class HeadingImage extends StatelessWidget {
     return Stack(
       children: [
         Hero(
-          tag:imageUrl,
+          tag: imageUrl,
           child: Image.network(
             imageUrl,
             height: 225,
@@ -33,6 +35,7 @@ class HeadingImage extends StatelessWidget {
             ),
           ),
         ),
+        const GGBackButton(),
       ],
     );
   }
