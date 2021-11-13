@@ -15,7 +15,7 @@ class GiveawayDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     logViewGame(
       itemId: giveaway.id.toString(),
-      itemName: giveaway.title,
+      itemName: giveaway.title ?? 'N/A',
       itemCategory: 'Giveaway',
     );
     return Scaffold(
@@ -26,9 +26,11 @@ class GiveawayDetailsPage extends StatelessWidget {
             Stack(
               children: [
                 Hero(
-                  tag: giveaway.image,
+                  tag: giveaway.image ??
+                      'https://via.placeholder.com/500x225?text=No+Image+Found',
                   child: Image.network(
-                    giveaway.image,
+                    giveaway.image ??
+                        'https://via.placeholder.com/500x225?text=No+Image+Found',
                     height: 225,
                     width: double.infinity,
                     fit: BoxFit.contain,
@@ -58,7 +60,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    giveaway.title,
+                    giveaway.title ?? 'N/A',
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -66,7 +68,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 32),
-                  Text(giveaway.description),
+                  Text(giveaway.description ?? 'N/A'),
                   const SizedBox(height: 16),
                   Text(
                     'Instructions',
@@ -77,11 +79,11 @@ class GiveawayDetailsPage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 16),
-                  Text(giveaway.instructions),
+                  Text(giveaway.instructions ?? 'N/A'),
                   const SizedBox(height: 16),
                   const SizedBox(height: 16),
                   KButtonBar(
-                    title: giveaway.title,
+                    title: giveaway.title ?? 'N/A',
                     url: giveaway.openGiveawayUrl,
                     entityType: EntityType.GIVEAWAY,
                   ),
@@ -98,20 +100,22 @@ class GiveawayDetailsPage extends StatelessWidget {
                   AboutWidget(
                     prefix1: 'Status',
                     prefix2: 'Worth',
-                    suffix1: giveaway.status,
-                    suffix2: giveaway.worth,
+                    suffix1: giveaway.status ?? 'N/A',
+                    suffix2: giveaway.worth ?? 'N/A',
                   ),
                   AboutWidget(
                     prefix1: 'Type',
                     prefix2: 'Ends at',
-                    suffix1: giveaway.type,
-                    suffix2: giveaway.endDate,
+                    suffix1: giveaway.type ?? 'N/A',
+                    suffix2: giveaway.endDate ?? 'N/A',
                   ),
                   AboutWidget(
                     prefix1: 'Platforms',
                     prefix2: 'Published at',
-                    suffix1: giveaway.platforms,
-                    suffix2: giveaway.publishedDate.toString(),
+                    suffix1: giveaway.platforms ?? 'N/A',
+                    suffix2: giveaway.publishedDate == null
+                        ? 'N/A'
+                        : giveaway.publishedDate.toString().substring(0, 10),
                   ),
                   const SizedBox(height: 32),
                 ],

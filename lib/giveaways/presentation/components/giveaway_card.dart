@@ -24,14 +24,16 @@ class GiveawayCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Hero(
-              tag: giveaway.image,
+              tag: giveaway.image ??
+                  'https://via.placeholder.com/500x225?text=No+Image+Found',
               child: ClipRRect(
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(6),
                   topRight: Radius.circular(6),
                 ),
                 child: Image.network(
-                  giveaway.image,
+                  giveaway.image ??
+                      'https://via.placeholder.com/500x225?text=No+Image+Found',
                   height: 150,
                   width: MediaQuery.of(context).size.width - 32 - 8,
                   fit: BoxFit.cover,
@@ -44,7 +46,7 @@ class GiveawayCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    giveaway.title,
+                    giveaway.title ?? 'N/A',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -56,7 +58,7 @@ class GiveawayCard extends StatelessWidget {
                   else
                     const SizedBox(height: 8),
                   Text(
-                    giveaway.worth == 'N/A' ? '' : giveaway.worth,
+                    giveaway.worth == 'N/A' ? '' : giveaway.worth!,
                     style: const TextStyle(
                       fontSize: 12,
                       decoration: TextDecoration.lineThrough,
@@ -68,7 +70,7 @@ class GiveawayCard extends StatelessWidget {
                   else
                     const SizedBox(height: 8),
                   Text(
-                    giveaway.description,
+                    giveaway.description ?? 'N/A',
                     style: const TextStyle(fontSize: 14),
                   ),
                 ],

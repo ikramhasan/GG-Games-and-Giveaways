@@ -21,18 +21,23 @@ dependencies:
   flutter_local_notifications: ^8.1.1+1
   flutter_snake_navigationbar: ^0.5.0
   font_awesome_flutter: ^9.1.0
+  freezed_annotation: ^0.15.0
   getwidget: ^2.0.1-nullsafety.4
   google_fonts: ^2.1.0
   http: ^0.13.3
+  json_annotation: ^4.3.0
   octo_image: ^1.0.0+1
   rflutter_alert: ^2.0.4
   share_plus: ^2.1.4
   url_launcher: ^6.0.9
 
 dev_dependencies:
+  build_runner: ^2.1.5
   flutter_launcher_icons: ^0.9.1
   flutter_test:
     sdk: flutter
+  freezed: ^0.15.1+1
+  json_serializable: ^6.0.1
   lint: ^1.6.0
 
 flutter_icons:
