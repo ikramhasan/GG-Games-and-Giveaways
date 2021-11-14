@@ -34,7 +34,7 @@ class GiveawayDetailsPage extends StatelessWidget {
                         'https://via.placeholder.com/500x225?text=No+Image+Found',
                     height: 225,
                     width: double.infinity,
-                    fit: BoxFit.contain,
+                    fit: BoxFit.cover,
                   ),
                 ),
                 Container(
@@ -109,7 +109,10 @@ class GiveawayDetailsPage extends StatelessWidget {
                     prefix1: 'Type',
                     prefix2: 'Ends at',
                     suffix1: giveaway.type ?? 'N/A',
-                    suffix2: giveaway.endDate ?? 'N/A',
+                    suffix2:
+                        giveaway.endDate == null || giveaway.endDate == 'N/A'
+                            ? 'N/A'
+                            : giveaway.endDate.toString().substring(0, 10),
                   ),
                   AboutWidget(
                     prefix1: 'Platforms',

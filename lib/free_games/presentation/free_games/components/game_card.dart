@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../data/models/free_game.dart';
-import '../../../utils/get_genre.dart';
 import '../../free_game_details/free_game_details_page.dart';
 import 'thumbnail_preview.dart';
 
@@ -21,7 +20,7 @@ class GameCard extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ThumbnailPreview(imageUrl: game.thumbnail, game: game),
+          ThumbnailPreview(imageUrl: game.thumbnail!, game: game),
           Flexible(
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 16),
@@ -47,7 +46,7 @@ class GameCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          game.title,
+                          game.title!,
                           overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             fontSize: 18,
@@ -58,7 +57,7 @@ class GameCard extends StatelessWidget {
                         const SizedBox(height: 8),
                         Expanded(
                           child: Text(
-                            game.shortDescription,
+                            game.shortDescription!,
                             maxLines: 4,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(fontSize: 14),
@@ -94,7 +93,7 @@ class GameCard extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                game.platform == Platform.PC_WINDOWS ? 'PC' : 'PC / BROWSER',
+                game.platform!,
                 style: const TextStyle(fontSize: 12),
               ),
             ),
@@ -114,7 +113,7 @@ class GameCard extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                getGenreString(game.genre),
+                game.genre!,
                 style: const TextStyle(
                   fontSize: 12,
                 ),
