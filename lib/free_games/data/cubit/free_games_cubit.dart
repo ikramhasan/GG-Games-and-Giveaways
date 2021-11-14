@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/app/utils/logger.dart';
 
 import '../models/free_game.dart';
 import '../repository/free_games_repository.dart';
@@ -36,6 +37,8 @@ class FreeGamesCubit extends Cubit<FreeGamesState> {
     if (category != null && category.isNotEmpty) {
       url = '$url&category=$category';
     }
+
+    logger.d(url, 'Filter url');
 
     try {
       final List<FreeGame> freeGamesList =

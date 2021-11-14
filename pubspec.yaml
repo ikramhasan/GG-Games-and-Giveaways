@@ -28,6 +28,7 @@ dependencies:
   google_fonts: ^2.1.0
   http: ^0.13.3
   json_annotation: ^4.3.0
+  logger: ^1.1.0
   lottie: ^1.2.1
   octo_image: ^1.0.0+1
   rflutter_alert: ^2.0.4

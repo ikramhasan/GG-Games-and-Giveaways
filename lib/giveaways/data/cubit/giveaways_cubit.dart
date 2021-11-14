@@ -1,5 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
+import 'package:free_games_giveaways/app/utils/logger.dart';
 
 import '../models/giveaway.dart';
 import '../repositories/giveaways_repository.dart';
@@ -42,6 +43,8 @@ class GiveawaysCubit extends Cubit<GiveawaysState> {
         url = '$url?type=$type';
       }
     }
+
+    logger.d(url, 'Filter Url');
 
     try {
       await logFilterQuery(url);
