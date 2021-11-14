@@ -70,7 +70,7 @@ class FreeGamesPage extends StatelessWidget {
                 itemBuilder: (context, index) {
                   final game = state.freeGamesList[index];
                   return FadeInUp(
-                    delay: Duration(milliseconds: index * 100),
+                    delay: Duration(milliseconds: index * 50),
                     child: Padding(
                       padding: const EdgeInsets.only(bottom: 16),
                       child: GameCard(game: game),

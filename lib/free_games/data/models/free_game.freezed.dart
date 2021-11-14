@@ -25,7 +25,9 @@ class _$FreeGameTearOff {
       {required int id,
       @JsonKey(defaultValue: 'N/A')
           String? title,
-      @JsonKey(defaultValue: 'N/A')
+      @JsonKey(
+          defaultValue:
+              'https://via.placeholder.com/500x225?text=No+Image+Found')
           String? thumbnail,
       @JsonKey(name: 'short_description', defaultValue: 'N/A')
           String? shortDescription,
@@ -71,7 +73,8 @@ mixin _$FreeGame {
   int get id => throw _privateConstructorUsedError;
   @JsonKey(defaultValue: 'N/A')
   String? get title => throw _privateConstructorUsedError;
-  @JsonKey(defaultValue: 'N/A')
+  @JsonKey(
+      defaultValue: 'https://via.placeholder.com/500x225?text=No+Image+Found')
   String? get thumbnail => throw _privateConstructorUsedError;
   @JsonKey(name: 'short_description', defaultValue: 'N/A')
   String? get shortDescription => throw _privateConstructorUsedError;
@@ -104,7 +107,9 @@ abstract class $FreeGameCopyWith<$Res> {
       {int id,
       @JsonKey(defaultValue: 'N/A')
           String? title,
-      @JsonKey(defaultValue: 'N/A')
+      @JsonKey(
+          defaultValue:
+              'https://via.placeholder.com/500x225?text=No+Image+Found')
           String? thumbnail,
       @JsonKey(name: 'short_description', defaultValue: 'N/A')
           String? shortDescription,
@@ -204,7 +209,9 @@ abstract class _$FreeGameCopyWith<$Res> implements $FreeGameCopyWith<$Res> {
       {int id,
       @JsonKey(defaultValue: 'N/A')
           String? title,
-      @JsonKey(defaultValue: 'N/A')
+      @JsonKey(
+          defaultValue:
+              'https://via.placeholder.com/500x225?text=No+Image+Found')
           String? thumbnail,
       @JsonKey(name: 'short_description', defaultValue: 'N/A')
           String? shortDescription,
@@ -303,7 +310,9 @@ class _$_FreeGame implements _FreeGame {
       {required this.id,
       @JsonKey(defaultValue: 'N/A')
           this.title,
-      @JsonKey(defaultValue: 'N/A')
+      @JsonKey(
+          defaultValue:
+              'https://via.placeholder.com/500x225?text=No+Image+Found')
           this.thumbnail,
       @JsonKey(name: 'short_description', defaultValue: 'N/A')
           this.shortDescription,
@@ -331,7 +340,8 @@ class _$_FreeGame implements _FreeGame {
   @JsonKey(defaultValue: 'N/A')
   final String? title;
   @override
-  @JsonKey(defaultValue: 'N/A')
+  @JsonKey(
+      defaultValue: 'https://via.placeholder.com/500x225?text=No+Image+Found')
   final String? thumbnail;
   @override
   @JsonKey(name: 'short_description', defaultValue: 'N/A')
@@ -419,7 +429,9 @@ abstract class _FreeGame implements FreeGame {
       {required int id,
       @JsonKey(defaultValue: 'N/A')
           String? title,
-      @JsonKey(defaultValue: 'N/A')
+      @JsonKey(
+          defaultValue:
+              'https://via.placeholder.com/500x225?text=No+Image+Found')
           String? thumbnail,
       @JsonKey(name: 'short_description', defaultValue: 'N/A')
           String? shortDescription,
@@ -446,7 +458,8 @@ abstract class _FreeGame implements FreeGame {
   @JsonKey(defaultValue: 'N/A')
   String? get title;
   @override
-  @JsonKey(defaultValue: 'N/A')
+  @JsonKey(
+      defaultValue: 'https://via.placeholder.com/500x225?text=No+Image+Found')
   String? get thumbnail;
   @override
   @JsonKey(name: 'short_description', defaultValue: 'N/A')
