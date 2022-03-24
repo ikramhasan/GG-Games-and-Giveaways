@@ -10,7 +10,7 @@ _$_FreeGame _$$_FreeGameFromJson(Map<String, dynamic> json) => _$_FreeGame(
       id: json['id'] as int,
       title: json['title'] as String? ?? 'N/A',
       thumbnail: json['thumbnail'] as String? ??
-          'https://via.placeholder.com/150x192?text=No+Image+Found',
+          'https://via.placeholder.com/500x225?text=No+Image+Found',
       shortDescription: json['short_description'] as String? ?? 'N/A',
       gameUrl: json['game_url'] as String? ?? 'N/A',
       genre: json['genre'] as String? ?? 'N/A',

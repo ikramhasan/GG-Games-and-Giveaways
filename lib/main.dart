@@ -3,9 +3,9 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:free_games_giveaways/app/app.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
 
-import 'app/app.dart';
 
 // ignore_for_file: avoid_void_async
 void main() async {
