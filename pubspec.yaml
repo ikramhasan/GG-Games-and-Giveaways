@@ -11,6 +11,7 @@ environment:
 dependencies:
   animate_do: ^2.0.0
   cupertino_icons: ^1.0.2
+  dartz: ^0.10.1
   firebase_analytics: ^8.3.3
   firebase_core: ^1.4.0
   firebase_crashlytics: ^2.1.1
@@ -26,6 +27,7 @@ dependencies:
   freezed_annotation: ^0.15.0
   getwidget: ^2.0.1-nullsafety.4
   google_fonts: ^2.1.0
+  google_mobile_ads: ^1.2.0
   http: ^0.13.3
   json_annotation: ^4.3.0
   logger: ^1.1.0

@@ -5,11 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:free_games_giveaways/app/app.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
-
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 // ignore_for_file: avoid_void_async
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize();
 
   await Firebase.initializeApp();
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;

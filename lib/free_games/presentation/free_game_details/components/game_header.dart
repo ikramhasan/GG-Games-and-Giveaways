@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/accordion/gf_accordion.dart';
 
-import '../../../../app/utils/launch_url.dart';
 import '../../../data/models/free_game_details.dart';
 
 class GameHeader extends StatelessWidget {
@@ -15,39 +14,17 @@ class GameHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                game.title!,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.secondary,
-                ),
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Theme.of(context).cardColor,
-                  side: BorderSide(
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                ),
-                onPressed: () {
-                  launchURL(game.gameUrl!);
-                },
-                child: Text(
-                  'Get the Game',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                ),
-              ),
-            ],
+          child: Text(
+            game.title!,
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
           ),
         ),
         GFAccordion(

@@ -53,7 +53,7 @@ Future<void> logActionButtonPressed({
   required String title,
 }) async {
   await analytics.logEvent(
-    name: 'Action Button Pressed',
+    name: 'action_button_pressed',
     parameters: {
       'id': id,
       'title': title,

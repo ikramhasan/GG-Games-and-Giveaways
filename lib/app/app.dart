@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:free_games_giveaways/ads/application/cubit/ads_cubit.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../free_games/data/cubit/free_game_detail_cubit.dart';
@@ -26,6 +27,9 @@ class App extends StatelessWidget {
         BlocProvider<GameDealsCubit>(
           create: (context) => GameDealsCubit(),
         ),
+        BlocProvider<AdsCubit>(
+          create: (context) => AdsCubit(),
+        ),
       ],
       child: MaterialApp(
         title: 'GG',
@@ -35,6 +39,14 @@ class App extends StatelessWidget {
           canvasColor: const Color(0xFF171717),
           cardColor: const Color(0xFF22252B),
           fontFamily: GoogleFonts.merriweather().fontFamily,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              primary: const Color(0xFF22252B),
+              side: const BorderSide(
+                color: Color(0xFF52EE01),
+              ),
+            ),
+          ),
           appBarTheme: const AppBarTheme(
             color: Color(0xFF22252B),
             titleTextStyle:

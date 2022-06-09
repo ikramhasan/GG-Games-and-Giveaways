@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:free_games_giveaways/ads/application/cubit/ads_cubit.dart';
+import 'package:free_games_giveaways/ads/presentation/ads_consent_page.dart';
 import 'package:free_games_giveaways/app/utils/analytics.dart';
 import 'package:share_plus/share_plus.dart';
-
-import '../../../../app/utils/launch_url.dart';
 
 // ignore_for_file: constant_identifier_names
 enum EntityType { GAME, GIVEAWAY }
@@ -38,8 +39,15 @@ class KButtonBar extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                launchURL(url);
-                logActionButtonPressed(id: url, title: title);
+                context.read<AdsCubit>().initializeInterstitialAd();
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => AdsConsentPage(
+                      url: url,
+                      title: title,
+                    ),
+                  ),
+                );
               },
               child: Text(
                 entityType == EntityType.GAME
