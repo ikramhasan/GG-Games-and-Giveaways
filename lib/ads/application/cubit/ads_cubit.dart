@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
@@ -9,12 +10,14 @@ class AdsCubit extends Cubit<AdsState> {
   AdsCubit() : super(AdsState.initial());
 
   InterstitialAd? _interstitialAd;
+  final _interstitialAdUnitId = 'ca-app-pub-7237005696214879/8415652194';
   final _testInterstitialAdUnitId = 'ca-app-pub-3940256099942544/1033173712';
 
   Future<void> initializeInterstitialAd() async {
     emit(state.copyWith(interstitialAdLoading: true));
     await InterstitialAd.load(
-      adUnitId: _testInterstitialAdUnitId,
+      adUnitId:
+          kReleaseMode ? _interstitialAdUnitId : _testInterstitialAdUnitId,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
