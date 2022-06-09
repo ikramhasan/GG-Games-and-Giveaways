@@ -2,7 +2,6 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:free_games_giveaways/app/presentation/components/gg_progress_indicator.dart';
 
 import '../../../app/presentation/about_page.dart';
@@ -63,20 +62,19 @@ class FreeGamesPage extends StatelessWidget {
           },
           builder: (context, state) {
             if (state is FreeGamesLoaded) {
-              return ListView.builder(
-                key: const PageStorageKey('free-games-list'),
-                itemCount: state.freeGamesList.length,
-                padding: const EdgeInsets.only(top: 16),
-                itemBuilder: (context, index) {
-                  final game = state.freeGamesList[index];
-                  return FadeInUp(
-                    delay: Duration(milliseconds: index * 50),
-                    child: Padding(
+              return FadeInUp(
+                child: ListView.builder(
+                  key: const PageStorageKey('free-games-list'),
+                  itemCount: state.freeGamesList.length,
+                  padding: const EdgeInsets.only(top: 16),
+                  itemBuilder: (context, index) {
+                    final game = state.freeGamesList[index];
+                    return Padding(
                       padding: const EdgeInsets.only(bottom: 16),
                       child: GameCard(game: game),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               );
             }
             return const GGProgressIndicator();

@@ -66,19 +66,18 @@ class GiveawaysPage extends StatelessWidget {
             }
 
             if (state is GiveawaysLoaded) {
-              return ListView.builder(
-                key: const PageStorageKey('giveaways-list'),
-                itemCount: state.giveawaysList.length,
-                itemBuilder: (context, index) {
-                  final giveaway = state.giveawaysList[index];
-                  return FadeInUp(
-                    delay: Duration(milliseconds: index * 100),
-                    child: Padding(
+              return FadeInUp(
+                child: ListView.builder(
+                  key: const PageStorageKey('giveaways-list'),
+                  itemCount: state.giveawaysList.length,
+                  itemBuilder: (context, index) {
+                    final giveaway = state.giveawaysList[index];
+                    return Padding(
                       padding: const EdgeInsets.only(bottom: 8, top: 8),
                       child: GiveawayCard(giveaway: giveaway),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               );
             }
 
